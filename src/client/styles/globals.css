@@ -14,3 +14,33 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/********************Fonts*************************/
+
+@font-face {
+  font-family: 'Maison-Regular';
+  src: url('../public/fonts/maisonNeue/Montserrat-Regular.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Maison-Medium';
+  src: url('../public/fonts/maisonNeue/Montserrat-Medium.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maison-Bold';
+  src: url('../public/fonts/maisonNeue/Montserrat-Bold.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Maison-SemiBold';
+  src: url('../public/fonts/maisonNeue/Montserrat-SemiBold.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Maison-Light';
+  src: url('../public/fonts/maisonNeue/Montserrat-Light.ttf');
+  font-display: swap;
+}
+/**************************************************************/
