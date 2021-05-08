@@ -8,7 +8,7 @@
         "url": "https://github.com/themaverikk/top-guns.git"
     },
     "scripts": {
-        "start:dev": "nodemon ./server.js localhost 3000"
+        "dev": "nodemon ./server.js localhost 8000"
     },
     "dependencies": {
         "mongodb": "^3.6.6",

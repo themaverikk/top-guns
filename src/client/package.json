@@ -4,7 +4,6 @@
     "description": "Top guns client config",
     "scripts": {
         "dev": "next dev",
-        "start:dev": "NODE_ENV='development' node server.js",
         "build": "next build && next export",
         "start": "next start"
     },
@@ -16,9 +15,5 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "yup": "^0.32.9"
-    },
-    "devDependencies": {
-        "express": "^4.17.1",
-        "http-proxy-middleware": "^2.0.0"
     }
 }

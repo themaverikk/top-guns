@@ -1,16 +1,15 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 8000;
 
 // place holder for the data
 const users = [{ name: "Arjun" }];
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../my-app/out')));
 
 app.get('/api/users', (req, res) => {
-    console.log('api/users called!')
+    console.log('api/users called!');
     res.json(users);
 });
 

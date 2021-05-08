@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 8000
 
 # Default cmd to run before starting a container from this image
-CMD ["node", "server.js"]
+CMD ["yarn", "dev"]
