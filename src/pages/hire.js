@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Card from '@material-ui/core/Card';
 
 const Hire = () => {
   return (
@@ -10,7 +11,10 @@ const Hire = () => {
       </Head>
 
       <main>
-        <div style={{ fontFamily: 'Maison-Bold' }}>lol</div>hello
+        <div style={{ fontFamily: 'Maison-Bold' }}>
+          <Card>hello</Card>
+        </div>
+        hello
       </main>
     </div>
   );
