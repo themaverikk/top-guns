@@ -1,0 +1,45 @@
+version: "3.8"  
+
+services:
+    mongodb_container:
+      image: mongo:4.4
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: rootpassword
+      ports:
+        - 27017:27017
+      volumes:
+        - mongodb_data_container:/data/db
+
+    client_container:
+        ports:
+            - 3000:3000
+        build:
+            context: src/client
+            dockerfile: Dockerfile
+        volumes:
+            - ./src/client:/usr/src/app
+            - nodemodules_client:/src/client/node_modules
+
+    server_container:
+        ports:
+            - 8000:8000
+        build:
+            context: src/server
+            dockerfile: Dockerfile
+
+        links:
+            - mongodb
+
+        depends_on: 
+            - mongodb
+
+        volumes:
+            - ./src/server:/usr/src/app
+            - nodemodules_server:/src/server/node_modules
+
+  volumes:
+    nodemodules_client: {}
+    nodemodules_server: {}
+    mongodb_data_container:
+
