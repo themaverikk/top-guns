@@ -4,8 +4,6 @@ const { createProxyMiddleware } = require("http-proxy-middleware")
 
 const port = process.env.PORT || 8000
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
 
 const apiPaths = {
     '/api': {
@@ -25,10 +23,6 @@ const server = express()
 if (isDevelopment) {
     server.use('/api', createProxyMiddleware(apiPaths['/api']));
 }
-
-server.all('*', (req, res) => {
-    return handle(req, res)
-})
 
 server.listen(port, (err) => {
     if (err) throw err
