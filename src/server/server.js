@@ -1,29 +1,26 @@
-const express = require('express')
-const { createProxyMiddleware } = require("http-proxy-middleware")
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 3000;
 
-const port = process.env.PORT || 8000
-const dev = process.env.NODE_ENV !== 'production'
+// place holder for the data
+const users = [{ name: "Arjun" }];
 
-const apiPaths = {
-    '/api': {
-        target: 'http://localhost:3000',
-        pathRewrite: {
-            '^/api': '/api'
-        },
-        changeOrigin: true
-    }
-}
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '../my-app/out')));
 
-const isDevelopment = process.env.NODE_ENV !== 'production'
+app.get('/api/users', (req, res) => {
+    console.log('api/users called!')
+    res.json(users);
+});
 
+app.post('/api/user', (req, res) => {
+    const user = req.body.user;
+    console.log('Adding user:::::', user);
+    users.push(user);
+    res.json("user addedd");
+});
 
-const server = express()
-
-if (isDevelopment) {
-    server.use('/api', createProxyMiddleware(apiPaths['/api']));
-}
-
-server.listen(port, (err) => {
-    if (err) throw err
-    console.log(`> Ready on http://localhost:${port}`)
+app.listen(port, () => {
+    console.log(`Server listening on the port::${port}`);
 });

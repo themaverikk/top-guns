@@ -1,24 +1,24 @@
 {
-	"name": "top-guns",
-	"version": "1.0.0",
-	"description": "Top guns server config",
-	"main": "server.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/themaverikk/top-guns.git"
-	},
-	"scripts": {
-		"start": "NODE_ENV='development' node server.js"
-	},
-	"dependencies": {
-		"mongodb": "^3.6.6",
-		"mongoose": "^5.12.7",
-		"next": "^10.2.0",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
-	},
-	"devDependencies": {
-		"express": "^4.17.1",
-		"http-proxy-middleware": "^2.0.0"
-	}
+    "name": "top-guns",
+    "version": "1.0.0",
+    "description": "Top guns server config",
+    "main": "server.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/themaverikk/top-guns.git"
+    },
+    "scripts": {
+        "start:dev": "nodemon ./server.js localhost 3000"
+    },
+    "dependencies": {
+        "mongodb": "^3.6.6",
+        "mongoose": "^5.12.7",
+        "next": "^10.2.0",
+        "nodemon": "^2.0.7",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "express": "^4.17.1"
+    }
 }
