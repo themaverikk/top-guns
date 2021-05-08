@@ -1,0 +1,21 @@
+{
+    "name": "top-guns",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "start:dev": "NODE_ENV='development' node server.js"
+    },
+    "dependencies": {
+        "next": "^10.2.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+
+    },
+    "devDependencies": {
+        "express": "^4.17.1",
+        "http-proxy-middleware": "^2.0.0"
+    }
+}
