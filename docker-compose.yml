@@ -29,16 +29,16 @@ services:
             dockerfile: Dockerfile
 
         links:
-            - mongodb
+            - mongodb_container
 
         depends_on: 
-            - mongodb
+            - mongodb_container
 
         volumes:
             - ./src/server:/usr/src/app
             - nodemodules_server:/src/server/node_modules
 
-  volumes:
+volumes:
     nodemodules_client: {}
     nodemodules_server: {}
     mongodb_data_container:
