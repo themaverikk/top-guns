@@ -18,8 +18,8 @@ services:
             context: src/client
             dockerfile: Dockerfile
         volumes:
+            - /usr/src/app/node_modules
             - ./src/client:/usr/src/app
-            - nodemodules_client:/src/client/node_modules
 
     server_container:
         ports:
@@ -35,11 +35,11 @@ services:
             - mongodb_container
 
         volumes:
+            - /usr/src/app/node_modules
             - ./src/server:/usr/src/app
-            - nodemodules_server:/src/server/node_modules
 
 volumes:
-    nodemodules_client: {}
-    nodemodules_server: {}
+    # nodemodules_client: {}
+    # nodemodules_server: {}
     mongodb_data_container:
 
