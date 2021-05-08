@@ -6,7 +6,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "start:dev": "NODE_ENV='development' node server.js"
+        "start:dev": "NODE_ENV='development' node src/server/server.js"
     },
     "dependencies": {
         "next": "^10.2.0",
