@@ -11,8 +11,13 @@
         "dev": "nodemon --inspect ./server.js localhost 8000"
     },
     "dependencies": {
+        "aws-sdk": "^2.903.0",
+        "express-fileupload": "^1.2.1",
+        "gridfs-stream": "^1.1.1",
         "mongodb": "^3.6.6",
         "mongoose": "^5.12.7",
+        "multer": "^1.4.2",
+        "multer-gridfs-storage": "^4.2.0",
         "next": "^10.2.0",
         "nodemon": "^2.0.7",
         "react": "^17.0.2",
