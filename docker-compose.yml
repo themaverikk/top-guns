@@ -3,15 +3,19 @@ version: "3.8"
 services:
     mongodb_container:
       image: mongo:4.4
+      container_name: mongodb_container
+
       environment:
-        MONGO_INITDB_ROOT_USERNAME: root
-        MONGO_INITDB_ROOT_PASSWORD: rootpassword
+        MONGO_INITDB_DATABASE: topguns-db
+
       ports:
         - 27017:27017
+
       volumes:
         - mongodb_data_container:/data/db
 
     client_container:
+        container_name: client_container
         ports:
             - 3000:3000
         build:
@@ -22,6 +26,8 @@ services:
             - ./src/client:/usr/src/app
 
     server_container:
+        container_name: server_container
+
         ports:
             - 8000:8000
         build:
@@ -39,7 +45,4 @@ services:
             - ./src/server:/usr/src/app
 
 volumes:
-    # nodemodules_client: {}
-    # nodemodules_server: {}
     mongodb_data_container:
-

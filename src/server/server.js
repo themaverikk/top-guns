@@ -1,23 +1,25 @@
+const HireRequest = require('./database/models/HireRequest');
 const express = require('express');
 const path = require('path');
 const app = express();
 const port = 8000;
 
-// place holder for the data
-const users = [{ name: "Arjun" }];
-
 app.use(express.json());
 
-app.get('/api/users', (req, res) => {
-    console.log('api/users called!');
-    res.json(users);
-});
+app.post('/api/hire', (req, res) => {
+    const hireRequestDetails = req.body.hireRequestDetails;
 
-app.post('/api/user', (req, res) => {
-    const user = req.body.user;
-    console.log('Adding user:::::', user);
-    users.push(user);
-    res.json("user addedd");
+    const hireRequest = new HireRequest(hireRequestDetails);
+
+    console.log("hireRequestDetails: ", hireRequestDetails);
+
+    hireRequest.save(err => {
+        if (err) {
+            console.log("Error while saving hireRequest: ", err);
+            throw err;
+        }
+    });
+    res.json("life set");
 });
 
 app.listen(port, () => {
