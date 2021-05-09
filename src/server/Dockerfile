@@ -9,6 +9,7 @@ WORKDIR /usr/src/app
 # when we change our application's nodejs dependencies
 COPY package*.json ./
 RUN npm install
+RUN npm install nodemon -g
 # For production
 # RUN npm ci --only=production
 
