@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Box } from "@material-ui/core";
 import FormLabel from "@material-ui/core/FormLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormGroup from "@material-ui/core/FormGroup";
@@ -20,9 +21,15 @@ const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(3),
   },
-  cancelButton: {
-    marginRight: "1rem",
+  button: {
+    width: '200px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
+  layout: {
+    minHeight: 'max-content',
+  }
 }));
 
 export default function CheckboxesGroup() {
@@ -39,6 +46,33 @@ export default function CheckboxesGroup() {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
 
+  // initial={{ x: '-100vw', opacity: 0 }}
+  // animate={{ x: 0, opacity: 1 }}
+  // transition={{
+  //   duration: 0.4,
+  //   ease: [0.7, 0, 0.05, 1],
+  // }}
+  // exit={{ x: '100vw', opacity: 0 }}
+  // key="hello"
+  // position="layout"
+
+  const variants = {
+    enter: {
+      x: '-100vw', opacity: 0,
+    },
+    exit: {
+      x: '100vw', opacity: 0
+    },
+    animate: {
+      x: 0, opacity: 1
+    },
+    transition: {
+      duration: 0.4,
+      ease: [0.7, 0, 0.05, 1],
+    },
+    position: 'layout'
+  }
+
   const { gilad, jason, antoine } = state;
   const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
 
@@ -46,18 +80,19 @@ export default function CheckboxesGroup() {
     <div className={classes.root}>
       <div></div>
       <div>
-        <AnimatePresence>
+
+
+
+        <AnimatePresence exitBeforeEnter>
+
           {formPhase === 0 && (
             <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 0.4,
-                ease: [0.7, 0, 0.05, 1],
-              }}
-              exit={{ x: 100, opacity: 0 }}
-              key="hello"
-              position="layout"
+              variants={variants}
+              initial="enter"
+              exit="exit"
+              animate="animate"
+              transition="transition"
+              key={formPhase}
             >
               <FormControl component="fieldset" className={classes.formControl}>
                 <FormLabel component="legend">Assign responsibility</FormLabel>
@@ -90,30 +125,85 @@ export default function CheckboxesGroup() {
                         name="antoine"
                       />
                     }
-                    label="Antoine Llorca"
+                    label="Antoine Llorc11a"
+                  />
+                </FormGroup>
+              </FormControl>
+            </motion.div>
+          )}
+
+
+          {formPhase === 1 && (
+            <motion.div
+              variants={variants}
+              initial="enter"
+              exit="exit"
+              animate="animate"
+              transition="transition"
+              key={formPhase}
+            >
+              <FormControl component="fieldset" className={classes.formControl}>
+                <FormLabel component="legend">Assign responsibility</FormLabel>
+                <FormGroup>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={gilad}
+                        onChange={handleChange}
+                        name="gilad"
+                      />
+                    }
+                    label="adsadasd Gray"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={jason}
+                        onChange={handleChange}
+                        name="jason"
+                      />
+                    }
+                    label="Jason Killian"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={antoine}
+                        onChange={handleChange}
+                        name="antoine"
+                      />
+                    }
+                    label="Antoine Llorc11a"
                   />
                 </FormGroup>
               </FormControl>
             </motion.div>
           )}
         </AnimatePresence>
-        {formPhase > 0 && (
+
+
+
+        <div className={classes.button}>
+          {formPhase > 0 && (
+            <Button
+              onClick={() => setFormPhase((currentPhase) => currentPhase - 1)}
+              variant="contained"
+              color="secondary"
+              className={classes.cancelButton}
+            >
+              Cancel
+            </Button>
+          )}
           <Button
-            onClick={() => setFormPhase((currentPhase) => currentPhase - 1)}
+            fullWidth={formPhase === 0}
+            onClick={() => setFormPhase((currentPhase) => currentPhase + 1)}
             variant="contained"
-            color="secondary"
-            className={classes.cancelButton}
+            color="primary"
           >
-            Cancel
-          </Button>
-        )}
-        <Button
-          onClick={() => setFormPhase((currentPhase) => currentPhase + 1)}
-          variant="contained"
-          color="primary"
-        >
-          Next
+            Next
         </Button>
+        </div>
+
       </div>
       <div></div>
     </div>
