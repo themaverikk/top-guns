@@ -8,6 +8,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
 import Checkbox from "@material-ui/core/Checkbox";
 import { motion, AnimatePresence } from "framer-motion";
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,10 +26,12 @@ const useStyles = makeStyles((theme) => ({
     width: '200px',
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    margin: '0 auto'
   },
   layout: {
-    minHeight: 'max-content',
+     minHeight: '500px',
+     paddingTop: '70%'
   }
 }));
 
@@ -87,6 +90,7 @@ export default function CheckboxesGroup() {
 
           {formPhase === 0 && (
             <motion.div
+              className={classes.layout}
               variants={variants}
               initial="enter"
               exit="exit"
@@ -135,6 +139,7 @@ export default function CheckboxesGroup() {
 
           {formPhase === 1 && (
             <motion.div
+              className={classes.layout}
               variants={variants}
               initial="enter"
               exit="exit"
@@ -175,6 +180,26 @@ export default function CheckboxesGroup() {
                     }
                     label="Antoine Llorc11a"
                   />
+                </FormGroup>
+              </FormControl>
+            </motion.div>
+          )}
+          {formPhase === 2 && (
+            <motion.div
+              className={classes.layout}
+              variants={variants}
+              initial="enter"
+              exit="exit"
+              animate="animate"
+              transition="transition"
+              key={formPhase}
+
+            >
+              <FormControl component="fieldset" className={classes.formControl}>
+                <FormLabel component="legend">Assign responsibility</FormLabel>
+                <FormGroup>
+                  <TextField required id="standard-required" label="Required" defaultValue="Hello World" />
+
                 </FormGroup>
               </FormControl>
             </motion.div>
