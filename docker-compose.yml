@@ -1,0 +1,48 @@
+version: "3.8"  
+
+services:
+    mongodb_container:
+      image: mongo:4.4
+      container_name: mongodb_container
+
+      environment:
+        MONGO_INITDB_DATABASE: topguns-db
+
+      ports:
+        - 27017:27017
+
+      volumes:
+        - mongodb_data_container:/data/db
+
+    client_container:
+        container_name: client_container
+        ports:
+            - 3000:3000
+        build:
+            context: src/client
+            dockerfile: Dockerfile
+        volumes:
+            - /usr/src/app/node_modules
+            - ./src/client:/usr/src/app
+
+    server_container:
+        container_name: server_container
+
+        ports:
+            - 8000:8000
+        build:
+            context: src/server
+            dockerfile: Dockerfile
+
+        links:
+            - mongodb_container
+
+        depends_on: 
+            - mongodb_container
+
+        volumes:
+            - /usr/src/app/node_modules
+            - ./src/server:/usr/src/app
+
+volumes:
+    mongodb_data_container:
