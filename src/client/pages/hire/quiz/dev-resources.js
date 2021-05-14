@@ -1,19 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
+import { FormControl, FormControlLabel, FormLabel, IconButton, Radio, RadioGroup } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, IconButton } from '@material-ui/core';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Head from 'next/head';
+import React from 'react';
 
 const renderRadioButtonQuestion = question => {
-  return (<>
+  return (<div key={question.name}>
     <FormLabel component="legend">{question.text}</FormLabel>
     <RadioGroup aria-label={question.name} name={question.name} >
-      {question.options.map(option => { return <FormControlLabel value={option.value} control={<Radio />} label={option.label} /> })}
-    </RadioGroup></>
+      {question.options.map(option => { return <FormControlLabel key={option.value} value={option.value} control={<Radio />} label={option.label} /> })}
+    </RadioGroup></div>
   );
 }
 
@@ -68,9 +64,7 @@ const questions = [
   }
 ]
 
-const Hire = () => {
-
-
+const DevResources = () => {
   return (
     <div>
       <Head>
@@ -103,4 +97,4 @@ const Hire = () => {
   );
 };
 
-export default Hire;
+export default DevResources;
