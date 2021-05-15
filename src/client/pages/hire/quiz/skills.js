@@ -3,9 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Head from 'next/head';
 import React from 'react';
-import img from '../../../public/img/skills/Angular.png';
-
-console.log('img ', img);
 
 const importAll = context => {
     let images = {};
@@ -15,26 +12,33 @@ const importAll = context => {
 
 const skillIcons = importAll(require.context('../../../public/img/skills', false, /\.(png|jpe?g|svg)$/));
 
-console.log('img2 ', skillIcons['Angular']);
-
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
     },
-    gridList: {
-        width: 500,
-        height: 450,
+    tile: {
+        width: "195px",
+        boxShadow: "0 3px 10px 0 rgba(0,0,0,.09) !important",
+        marginRight: "0",
+        marginBottom: "11px",
+        cursor: "pointer",
+        borderRadius: "5px",
+        backgroundColor: "#fff",
     },
+    icon: {
+        width: "30px",
+        height: "30px",
+        marginBottom: "8px"
+    }
+
 }));
 
 const skillsData = [
     {
         img: skillIcons['Angular'],
         title: 'AngularJS Developer',
+        isSelected:true,
     },
     {
         img: skillIcons['front-end'],
@@ -165,16 +169,19 @@ const Skills = () => {
                     justifyContent: 'center',
                 }}>
                     <FormControl component="fieldset">
-                        <div className={classes.root}>
-                            <GridList cellHeight={160} className={classes.gridList} cols={4}>
+                        <Box component="div" display="block" className={classes.root}>
+                            <GridList className={classes.gridList} cols={4}>
                                 {skillsData.map(skill => (
-                                    <GridListTile cols={skill.cols || 1}>
-                                        <img key={skill.img} src={skill.img} alt={skill.title} />
+                                    <GridListTile classes={{
+                                        root: classes.root,
+                                        tile: classes.tile,
+                                    }} cols={skill.cols || 1} onClick={()=>alert('some')}>
+                                        <img key={skill.img} src={skill.img} alt={skill.title} className={classes.icon} />
                                         <Box component="div" display="block">{skill.title}</Box>
                                     </GridListTile>
                                 ))}
                             </GridList>
-                        </div>
+                        </Box>
 
                         <IconButton aria-label="back">
                             <ArrowBackIosIcon />
