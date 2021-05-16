@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 3000
 
 # default cmd to run before starting a container from this image
-CMD ["yarn", "dev"]
+CMD ["yarn","NODE_OPTIONS='--inspect'", "dev"]

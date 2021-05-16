@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Box } from "@material-ui/core";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Button from "@material-ui/core/Button";
-import Checkbox from "@material-ui/core/Checkbox";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Box } from '@material-ui/core';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Button from '@material-ui/core/Button';
+import Checkbox from '@material-ui/core/Checkbox';
+import { motion, AnimatePresence } from 'framer-motion';
 import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "grid",
-    alignItems: "center",
-    width: "100vw",
-    height: "100vh",
-    gridTemplateColumns: "1fr 2fr 1fr",
-    justifyItems: "center",
+    display: 'grid',
+    alignItems: 'center',
+    width: '100vw',
+    height: '100vh',
+    gridTemplateColumns: '1fr 2fr 1fr',
+    justifyItems: 'center',
   },
   formControl: {
     margin: theme.spacing(3),
@@ -27,12 +27,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: '0 auto'
+    margin: '0 auto',
   },
   layout: {
-     minHeight: '500px',
-     paddingTop: '70%'
-  }
+    minHeight: '500px',
+    paddingTop: '70%',
+  },
 }));
 
 export default function CheckboxesGroup() {
@@ -46,6 +46,7 @@ export default function CheckboxesGroup() {
   const [formPhase, setFormPhase] = useState(0);
 
   const handleChange = (event) => {
+    debugger;
     setState({ ...state, [event.target.name]: event.target.checked });
   };
 
@@ -61,20 +62,23 @@ export default function CheckboxesGroup() {
 
   const variants = {
     enter: {
-      x: '-100vw', opacity: 0,
+      x: '-100vw',
+      opacity: 0,
     },
     exit: {
-      x: '100vw', opacity: 0
+      x: '100vw',
+      opacity: 0,
     },
     animate: {
-      x: 0, opacity: 1
+      x: 0,
+      opacity: 1,
     },
     transition: {
       duration: 0.4,
       ease: [0.7, 0, 0.05, 1],
     },
-    position: 'layout'
-  }
+    position: 'layout',
+  };
 
   const { gilad, jason, antoine } = state;
   const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
@@ -83,11 +87,7 @@ export default function CheckboxesGroup() {
     <div className={classes.root}>
       <div></div>
       <div>
-
-
-
         <AnimatePresence exitBeforeEnter>
-
           {formPhase === 0 && (
             <motion.div
               className={classes.layout}
@@ -135,7 +135,6 @@ export default function CheckboxesGroup() {
               </FormControl>
             </motion.div>
           )}
-
 
           {formPhase === 1 && (
             <motion.div
@@ -193,20 +192,21 @@ export default function CheckboxesGroup() {
               animate="animate"
               transition="transition"
               key={formPhase}
-
             >
               <FormControl component="fieldset" className={classes.formControl}>
                 <FormLabel component="legend">Assign responsibility</FormLabel>
                 <FormGroup>
-                  <TextField required id="standard-required" label="Required" defaultValue="Hello World" />
-
+                  <TextField
+                    required
+                    id="standard-required"
+                    label="Required"
+                    defaultValue="Hello World"
+                  />
                 </FormGroup>
               </FormControl>
             </motion.div>
           )}
         </AnimatePresence>
-
-
 
         <div className={classes.button}>
           {formPhase > 0 && (
@@ -226,9 +226,8 @@ export default function CheckboxesGroup() {
             color="primary"
           >
             Next
-        </Button>
+          </Button>
         </div>
-
       </div>
       <div></div>
     </div>

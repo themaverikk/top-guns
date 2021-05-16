@@ -11,6 +11,7 @@
     "dependencies": {
         "@material-ui/core": "^4.11.4",
         "@material-ui/icons": "^4.11.2",
+        "cross-env": "^7.0.3",
         "formik": "^2.2.6",
         "mongodb": "^3.6.6",
         "mongoose": "^5.12.7",

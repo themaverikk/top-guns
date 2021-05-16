@@ -1,4 +1,5 @@
 const HireRequest = require('./database/models/HireRequest');
+const CanditateApplication = require('./database/models/CandidateApplication');
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -20,6 +21,22 @@ app.post('/api/hire', (req, res) => {
     }
   });
   res.json('life set');
+});
+
+app.post('/api/candidate', (req, res) => {
+  const candidateApplicationDetails = req.body.candidateApplicationDetails;
+
+  const candidateApplication = new CanditateApplication(
+    candidateApplicationDetails
+  );
+
+  candidateApplication.save((err) => {
+    if (err) {
+      console.log('Error while saving hireRequest: ', err);
+      throw err;
+    }
+  });
+  res.json('success');
 });
 
 app.get('/api/upload', function (req, res) {
