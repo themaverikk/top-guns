@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { AppWrapper } from '../context/state';
+
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
@@ -8,8 +10,7 @@ function MyApp({ Component, pageProps }) {
             jssStyles.parentElement.removeChild(jssStyles);
         }
     }, []);
-    return <Component {...pageProps }
-    />;
+    return <AppWrapper><Component {...pageProps} /></AppWrapper>
 }
 
 export default MyApp;

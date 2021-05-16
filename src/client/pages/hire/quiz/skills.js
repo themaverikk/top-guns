@@ -2,15 +2,8 @@ import { Box, Button, FormControl, GridList, GridListTile, IconButton } from '@m
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Head from 'next/head';
-import React from 'react';
-
-const importAll = context => {
-    let images = {};
-    context.keys().map((item) => { images[item.replace('./', '').substring(0, item.length - 6)] = context(item).default; });
-    return images;
-}
-
-const skillIcons = importAll(require.context('../../../public/img/skills', false, /\.(png|jpe?g|svg)$/));
+import React, { useEffect, useState } from 'react';
+import { useAppContext } from '../../../context/state';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,11 +27,17 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+const importAll = context => {
+    let images = {};
+    context.keys().map((item) => { images[item.replace('./', '').substring(0, item.length - 6)] = context(item).default; });
+    return images;
+}
+const skillIcons = importAll(require.context('../public/img/skills', false, /\.(png|jpe?g|svg)$/));
 const skillsData = [
     {
         img: skillIcons['Angular'],
         title: 'AngularJS Developer',
-        isSelected:true,
+        isSelected: true,
     },
     {
         img: skillIcons['front-end'],
@@ -152,6 +151,9 @@ const skillsData = [
 
 const Skills = () => {
     const classes = useStyles();
+    const { data, updateData } = useAppContext();
+
+    const { skills, setSkills } = useState(skillsData);
 
     return (
         <div>
@@ -162,35 +164,28 @@ const Skills = () => {
             </Head>
 
             <main>
-                <div style={{
-                    fontFamily: 'Maison-Bold',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}>
-                    <FormControl component="fieldset">
-                        <Box component="div" display="block" className={classes.root}>
-                            <GridList className={classes.gridList} cols={4}>
-                                {skillsData.map(skill => (
-                                    <GridListTile classes={{
-                                        root: classes.root,
-                                        tile: classes.tile,
-                                    }} cols={skill.cols || 1} onClick={()=>alert('some')}>
-                                        <img key={skill.img} src={skill.img} alt={skill.title} className={classes.icon} />
-                                        <Box component="div" display="block">{skill.title}</Box>
-                                    </GridListTile>
-                                ))}
-                            </GridList>
-                        </Box>
+                <FormControl component="fieldset">
+                    <Box component="div" display="block" className={classes.root}>
+                        <GridList className={classes.gridList} cols={4}>
+                            {skillsData.map(skill => (
+                                <GridListTile classes={{
+                                    root: classes.root,
+                                    tile: classes.tile,
+                                }} cols={skill.cols || 1} onClick={() => alert('some')}>
+                                    <img key={skill.img} src={skill.img} alt={skill.title} className={classes.icon} />
+                                    <Box component="div" display="block">{skill.title}</Box>
+                                </GridListTile>
+                            ))}
+                        </GridList>
+                    </Box>
 
-                        <IconButton aria-label="back">
-                            <ArrowBackIosIcon />
-                        </IconButton>
-                        <Button variant="contained" color="primary">
-                            Next
+                    <IconButton aria-label="back">
+                        <ArrowBackIosIcon />
+                    </IconButton>
+                    <Button variant="contained" color="primary">
+                        Next
                         </Button>
-                    </FormControl>
-                </div>
+                </FormControl>
             </main>
         </div>
     );
