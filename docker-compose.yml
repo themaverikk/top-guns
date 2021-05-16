@@ -18,6 +18,7 @@ services:
         container_name: client_container
         ports:
             - 3000:3000
+            - 9229:9229
         build:
             context: src/client
             dockerfile: Dockerfile

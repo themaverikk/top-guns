@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Top guns client config",
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "clsx": "^1.1.1",
     "formik": "^2.2.6",
     "framer-motion": "^4.1.13",
     "next": "^10.2.0",
