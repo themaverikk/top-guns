@@ -24,11 +24,110 @@ const useStyles = makeStyles((theme) => ({
 
 const Skills = () => {
     const classes = useStyles();
-    const { applicationState } = useAppContext();
-    const [error, setError] = useState(false);
+
+    const { applicationState, setApplicationState } = useAppContext();
+    const [error, setError] = useState({
+        name: false,
+        companyName: false,
+        email: false,
+        phone: false
+    });
+
+    const [helperText, sethelperText] = useState({
+        name: "",
+        companyName: "",
+        email: "",
+        phone: ""
+    });
+
+    const validateField = field => {
+
+        const existingFieldValue = applicationState.contactDetails[field];
+
+        switch (field) {
+            case "name":
+                if (!existingFieldValue) {
+                    setError({
+                        ...error,
+                        name: true
+                    });
+
+                    sethelperText({
+                        ...helperText,
+                        name: "Please enter your name"
+                    });
+                }
+                break;
+
+            case "companyName":
+                if (!existingFieldValue) {
+                    setError({
+                        ...error,
+                        companyName: true
+                    });
+
+                    sethelperText({
+                        ...helperText,
+                        companyName: "Please enter a company name"
+                    });
+                }
+                break;
+
+            case "email":
+                if (!existingFieldValue) {
+                    setError({
+                        ...error,
+                        email: true
+                    });
+
+                    sethelperText({
+                        ...helperText,
+                        email: "Please enter company email",
+                    });
+                }
+                break;
+
+            case "phone":
+                if (!existingFieldValue) {
+                    setError({
+                        ...error,
+                        phone: true
+                    });
+
+                    sethelperText({
+                        ...helperText,
+                        phone: "Please enter a valid phone number"
+                    });
+                }
+                break;
+
+        }
+    }
+
+    const handleChange = field => event => {
+        const updatedValue = event.target.value;
+
+        setApplicationState({
+            ...applicationState,
+            contactDetails: {
+                ...applicationState.contactDetails,
+                [field]: updatedValue,
+            }
+        });
+
+        validateField(field);
+
+
+        console.log('ap: ', applicationState)
+    }
 
     const handleSubmit = event => {
         event.preventDefault();
+
+        validateField("name");
+        validateField("companyName");
+        validateField("email");
+        validateField("phone");
     }
 
     return (
@@ -42,15 +141,11 @@ const Skills = () => {
             <main>
                 <form onSubmit={handleSubmit}>
                     <FormControl component="fieldset">
-                        <TextField error id="standard-basic" label="error" required={true} helperText="Incorrect entry." />
-                        <TextField id="standard-basic" label="Email" required={true} />
-                        <TextField id="standard-basic" label="Company Name" required={true} />
-                        <TextField id="standard-basic" label="Email" required={true} />
-                        <TextField id="standard-basic" label="Phone Number" required={true} />
+                        <TextField variant="outlined" label="Name" required={true} defaultValue={applicationState.contactDetails.name} error={error.name} helperText={helperText.name} onChange={handleChange("name")} />
+                        <TextField variant="outlined" label="Company Name" required={true} defaultValue={applicationState.contactDetails.companyName} error={error.companyName} helperText={helperText.companyName} onChange={handleChange("companyName")} />
+                        <TextField variant="outlined" label="Email" required={true} defaultValue={applicationState.contactDetails.email} error={error.email} helperText={helperText.email} onChange={handleChange("email")} />
+                        <TextField variant="outlined" label="Phone Number (with ISD code)" required={true} defaultValue={applicationState.contactDetails.phone} error={error.phone} helperText={helperText.phone} onChange={handleChange("phone")} />
 
-                        <Box component="div" display="block" className={classes.root}>
-
-                        </Box>
                         <Link href="/hire/quiz/skills" passHref >
                             <IconButton aria-label="back">
                                 <ArrowBackIosIcon />

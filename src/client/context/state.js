@@ -226,13 +226,21 @@ const devResourcesQuestions = [
     }
 ];
 
+const contactDetails = {
+    name: "",
+    companyName: "",
+    email: "",
+    phone: ""
+};
+
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
     const [applicationState, setApplicationState] = useState(
         {
             questions: devResourcesQuestions,
-            skills
+            skills,
+            contactDetails
         });
 
     return (
