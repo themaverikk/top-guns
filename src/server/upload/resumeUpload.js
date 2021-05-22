@@ -21,6 +21,14 @@ exports.uploadResumeToS3 = async resumeFile => {
 
   const fileName = resumeFile.name.substring(0, extensionIndex);
   const fileExtension = resumeFile.name.substring(extensionIndex + 1);
+
+  const allowedExtensions = ["pdf", "doc", "docx", "txt"];
+
+  if (!allowedExtensions.includes(fileExtension)) {
+    console.log("Error while trying to upload resume to s3, invalid file extension: ", fileExtension);
+    throw Error("Invalid resume");
+  }
+
   const s3ResumeFileName = fileName + '_' + Date.now().toString() + '.' + fileExtension;
   const params = {
     Key: s3ResumeFileName,

@@ -139,7 +139,7 @@ const CandidateApply = () => {
                             <TextField key={field} variant="outlined" required={true} label={applicationState.candidateDetails[field].label} defaultValue={applicationState.candidateDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} />
                         )}
 
-                        <input type="file" hidden accept="application/pdf" id="resume-upload" onChange={handleFileChange} />
+                        <input type="file" hidden accept=".pdf,.doc,.docx,.txt" id="resume-upload" onChange={handleFileChange} />
                         <label htmlFor="resume-upload">
                             <IconButton color="primary" className={classes.button} component="span">
                                 <PublishIcon />

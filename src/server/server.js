@@ -1,5 +1,5 @@
 const HireRequest = require('./database/models/HireRequest');
-const { uploadResumeToS3 } = require('./upload/upload');
+const { uploadResumeToS3 } = require('./upload/resumeUpload');
 
 const express = require('express');
 const path = require('path');
