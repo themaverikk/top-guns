@@ -80,12 +80,10 @@ export function Hero() {
               </p>
               <div className="header-button">
                 <a
-                  href="https://rebrand.ly/slick-ud"
-                  rel="nofollow"
-                  target="_blank"
+                  href="/hire/quiz/dev-resources"
                   className="btn btn-border-filled"
                 >
-                  Purchase Now
+                  Hire Remote Engineers
                 </a>
                 <a
                   href="https://rebrand.ly/slick-ud"

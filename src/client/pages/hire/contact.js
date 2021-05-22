@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useAppContext } from '../../context/state';
+import { submitHireRequest } from "../../utils";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -77,7 +78,6 @@ const Contact = () => {
     const validateFields = () => {
 
         for (const field in applicationState.contactDetails) {
-            console.log(field, applicationState.contactDetails[field].value)
             validateField(field, applicationState.contactDetails[field].value);
         }
     };
@@ -97,15 +97,35 @@ const Contact = () => {
         });
 
         validateField(field, updatedValue);
-
-
-        console.log('ap: ', applicationState)
     }
 
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         validateFields();
+
+        const isFormValid = document.getElementById("hireContactForm").checkValidity();
+
+        if (isFormValid) {
+
+            const questions = applicationState.questions.map(question => {
+                return {
+                    question: question.name,
+                    answer: question.answer
+                }
+            });
+
+            const requiredSkills = applicationState.skills.filter(skill => skill.isSelected).map(skill => skill.id);
+            const contactDetails = Object.keys(applicationState.contactDetails).map(field => {
+                return {
+                    [field]: applicationState.contactDetails[field].value,
+                }
+            })
+            const hireRequestDetails = { questions, requiredSkills, contactDetails };
+
+            await submitHireRequest(hireRequestDetails);
+        }
     }
+
 
     return (
         <div>
@@ -116,10 +136,10 @@ const Contact = () => {
             </Head>
 
             <main>
-                <form onSubmit={handleSubmit}>
+                <form id="hireContactForm" onSubmit={handleSubmit}>
                     <FormControl component="fieldset">
                         {Object.keys(applicationState.contactDetails).map(field =>
-                            <TextField key={field} variant="outlined" required={false} label={applicationState.contactDetails[field].label} defaultValue={applicationState.contactDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} />
+                            <TextField key={field} variant="outlined" required={true} label={applicationState.contactDetails[field].label} defaultValue={applicationState.contactDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} />
                         )}
                         <Link href="/hire/quiz/skills" passHref >
                             <IconButton aria-label="back">
