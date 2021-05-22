@@ -1,4 +1,6 @@
 const HireRequest = require('./database/models/HireRequest');
+const { uploadResumeToS3 } = require('./upload/upload');
+
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -9,33 +11,49 @@ const fileupload = require('express-fileupload');
 app.use(fileupload());
 
 app.post('/api/hire', (req, res) => {
-  const hireRequestDetails = req.body.hireRequestDetails;
 
-  const hireRequest = new HireRequest(hireRequestDetails);
+  const hireRequest = new HireRequest(req.body);
 
-  hireRequest.save((err) => {
+  hireRequest.save(err => {
     if (err) {
       console.log('Error while saving hireRequest: ', err);
       throw err;
     }
   });
-  res.json('life set');
+
+  res.json({
+    status: "success"
+  });
 });
 
-app.get('/api/upload', function (req, res) {
-  res
-    .status(200)
-    .send(
-      '<form method="POST" enctype="multipart/form-data" action="/api/upload">' +
-        '<input type="file" name="upl"/><input type="submit"/>' +
-        '</form>'
-    )
-    .end();
+
+app.post('/api/apply', (req, res) => {
+
+  try {
+    const resumeFile = req.files.resume;
+    const resumeUrl = uploadResumeToS3(resumeFile);
+
+    const hireRequest = new HireRequest(hireRequestDetails);
+
+    hireRequest.save(err => {
+      if (err) {
+        console.log('Error while saving hireRequest: ', err);
+        throw err;
+      }
+    });
+
+    res.json({
+      status: "success"
+    });
+
+  } catch (err) {
+    console.log("Error while serving request: ", err);
+
+    res.json({
+      status: "failure"
+    })
+  }
 });
-
-const { upload } = require('./upload/upload');
-
-app.post('/api/upload', upload);
 
 app.listen(port, () => {
   console.log(`Server listening on the port::${port}`);

@@ -115,12 +115,11 @@ const Contact = () => {
             });
 
             const requiredSkills = applicationState.skills.filter(skill => skill.isSelected).map(skill => skill.id);
-            const contactDetails = Object.keys(applicationState.contactDetails).map(field => {
-                return {
-                    [field]: applicationState.contactDetails[field].value,
-                }
+            const contactDetails = {};
+            Object.keys(applicationState.contactDetails).forEach(field => {
+                contactDetails[field] = applicationState.contactDetails[field].value
             })
-            const hireRequestDetails = { questionsAnswers, requiredSkills, contactDetails };
+            const hireRequestDetails = { questionsAnswers, requiredSkills, ...contactDetails };
 
             await submitHireRequest(hireRequestDetails);
         }

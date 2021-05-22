@@ -1,9 +1,10 @@
 const mongoose = require("../config");
 
 const hireRequestSchema = new mongoose.Schema({
-    email: String,
     name: String,
-    phoneNumber: String,
+    companyName: String,
+    email: String,
+    phone: String,
 
     questionsAnswers: [{
         question: String,
