@@ -142,7 +142,7 @@ const CandidateApply = () => {
                         <input type="file" hidden accept=".pdf,.doc,.docx,.txt" id="resume-upload" onChange={handleFileChange} />
                         <label htmlFor="resume-upload">
                             <IconButton color="primary" className={classes.button} component="span">
-                                <PublishIcon />
+                                <PublishIcon />(Only pdf, doc, docx, txt allowed)
                             </IconButton>
                         </label>
                         <FormHelperText>{helperText.resume}</FormHelperText>

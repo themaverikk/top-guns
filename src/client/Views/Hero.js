@@ -86,12 +86,10 @@ export function Hero() {
                   Hire Remote Engineers
                 </a>
                 <a
-                  href="https://rebrand.ly/slick-ud"
-                  rel="nofollow"
-                  target="_blank"
+                  href="/apply"
                   className="btn btn-border page-scroll"
                 >
-                  Learn More
+                  Apply As A Freelancer
                 </a>
               </div>
             </div>
