@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Box } from "@material-ui/core";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
 import Checkbox from "@material-ui/core/Checkbox";
-import { motion, AnimatePresence } from "framer-motion";
+import FormControl from "@material-ui/core/FormControl";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormLabel from "@material-ui/core/FormLabel";
+import { makeStyles } from "@material-ui/core/styles";
 import TextField from '@material-ui/core/TextField';
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
     margin: '0 auto'
   },
   layout: {
-     minHeight: '500px',
-     paddingTop: '70%'
+    minHeight: '500px',
+    paddingTop: '70%'
   }
 }));
 
@@ -83,9 +82,6 @@ export default function CheckboxesGroup() {
     <div className={classes.root}>
       <div></div>
       <div>
-
-
-
         <AnimatePresence exitBeforeEnter>
 
           {formPhase === 0 && (
@@ -199,7 +195,6 @@ export default function CheckboxesGroup() {
                 <FormLabel component="legend">Assign responsibility</FormLabel>
                 <FormGroup>
                   <TextField required id="standard-required" label="Required" defaultValue="Hello World" />
-
                 </FormGroup>
               </FormControl>
             </motion.div>

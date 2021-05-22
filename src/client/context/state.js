@@ -245,6 +245,17 @@ const contactDetails = {
     },
 };
 
+const candidateDetails = {
+    name: {
+        label: "Name",
+        value: "",
+    },
+    email: {
+        label: "Email",
+        value: "",
+    },
+};
+
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
@@ -252,7 +263,8 @@ export function AppWrapper({ children }) {
         {
             questions: devResourcesQuestions,
             skills,
-            contactDetails
+            contactDetails,
+            candidateDetails
         });
 
     return (
