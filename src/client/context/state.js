@@ -227,10 +227,22 @@ const devResourcesQuestions = [
 ];
 
 const contactDetails = {
-    name: "",
-    companyName: "",
-    email: "",
-    phone: ""
+    name: {
+        label: "Name",
+        value: "",
+    },
+    companyName: {
+        label: "Company Name",
+        value: "",
+    },
+    email: {
+        label: "Email",
+        value: "",
+    },
+    phone: {
+        label: "Phone number with ISD code",
+        value: "",
+    },
 };
 
 const AppContext = createContext();

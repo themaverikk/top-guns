@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, IconButton, TextField } from '@material-ui/core';
+import { Button, FormControl, IconButton, TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Head from 'next/head';
@@ -22,7 +22,22 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const Skills = () => {
+const helperTextConfig = {
+    name: {
+        mandatory: "Please enter your name",
+    },
+    companyName: {
+        mandatory: "Please enter a company name",
+    },
+    email: {
+        mandatory: "Please enter a email",
+    },
+    phone: {
+        mandatory: "Please enter a valid phone number",
+    },
+};
+
+const Contact = () => {
     const classes = useStyles();
 
     const { applicationState, setApplicationState } = useAppContext();
@@ -33,76 +48,39 @@ const Skills = () => {
         phone: false
     });
 
-    const [helperText, sethelperText] = useState({
+    const [helperText, setHelperText] = useState({
         name: "",
         companyName: "",
         email: "",
         phone: ""
     });
 
-    const validateField = field => {
+    const validateField = (field, fieldValue) => {
 
-        const existingFieldValue = applicationState.contactDetails[field];
+        const [error, helperText] = fieldValue ? [false, ""] : [true, helperTextConfig[field].mandatory];
 
-        switch (field) {
-            case "name":
-                if (!existingFieldValue) {
-                    setError({
-                        ...error,
-                        name: true
-                    });
+        setError(prevState => {
+            return {
+                ...prevState,
+                [field]: error
+            }
+        });
 
-                    sethelperText({
-                        ...helperText,
-                        name: "Please enter your name"
-                    });
-                }
-                break;
-
-            case "companyName":
-                if (!existingFieldValue) {
-                    setError({
-                        ...error,
-                        companyName: true
-                    });
-
-                    sethelperText({
-                        ...helperText,
-                        companyName: "Please enter a company name"
-                    });
-                }
-                break;
-
-            case "email":
-                if (!existingFieldValue) {
-                    setError({
-                        ...error,
-                        email: true
-                    });
-
-                    sethelperText({
-                        ...helperText,
-                        email: "Please enter company email",
-                    });
-                }
-                break;
-
-            case "phone":
-                if (!existingFieldValue) {
-                    setError({
-                        ...error,
-                        phone: true
-                    });
-
-                    sethelperText({
-                        ...helperText,
-                        phone: "Please enter a valid phone number"
-                    });
-                }
-                break;
-
-        }
+        setHelperText(prevState => {
+            return {
+                ...prevState,
+                [field]: helperText
+            }
+        });
     }
+
+    const validateFields = () => {
+
+        for (const field in applicationState.contactDetails) {
+            console.log(field, applicationState.contactDetails[field].value)
+            validateField(field, applicationState.contactDetails[field].value);
+        }
+    };
 
     const handleChange = field => event => {
         const updatedValue = event.target.value;
@@ -111,11 +89,14 @@ const Skills = () => {
             ...applicationState,
             contactDetails: {
                 ...applicationState.contactDetails,
-                [field]: updatedValue,
+                [field]: {
+                    ...applicationState.contactDetails[field],
+                    value: updatedValue
+                }
             }
         });
 
-        validateField(field);
+        validateField(field, updatedValue);
 
 
         console.log('ap: ', applicationState)
@@ -123,11 +104,7 @@ const Skills = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-
-        validateField("name");
-        validateField("companyName");
-        validateField("email");
-        validateField("phone");
+        validateFields();
     }
 
     return (
@@ -141,17 +118,15 @@ const Skills = () => {
             <main>
                 <form onSubmit={handleSubmit}>
                     <FormControl component="fieldset">
-                        <TextField variant="outlined" label="Name" required={true} defaultValue={applicationState.contactDetails.name} error={error.name} helperText={helperText.name} onChange={handleChange("name")} />
-                        <TextField variant="outlined" label="Company Name" required={true} defaultValue={applicationState.contactDetails.companyName} error={error.companyName} helperText={helperText.companyName} onChange={handleChange("companyName")} />
-                        <TextField variant="outlined" label="Email" required={true} defaultValue={applicationState.contactDetails.email} error={error.email} helperText={helperText.email} onChange={handleChange("email")} />
-                        <TextField variant="outlined" label="Phone Number (with ISD code)" required={true} defaultValue={applicationState.contactDetails.phone} error={error.phone} helperText={helperText.phone} onChange={handleChange("phone")} />
-
+                        {Object.keys(applicationState.contactDetails).map(field =>
+                            <TextField key={field} variant="outlined" required={false} label={applicationState.contactDetails[field].label} defaultValue={applicationState.contactDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} />
+                        )}
                         <Link href="/hire/quiz/skills" passHref >
                             <IconButton aria-label="back">
                                 <ArrowBackIosIcon />
                             </IconButton>
                         </Link>
-                        <Button variant="contained" color="primary">
+                        <Button type="submit" variant="contained" color="primary">
                             Submit
                     </Button>
                     </FormControl>
@@ -161,4 +136,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default Contact;
