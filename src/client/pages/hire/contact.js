@@ -107,7 +107,7 @@ const Contact = () => {
 
         if (isFormValid) {
 
-            const questions = applicationState.questions.map(question => {
+            const questionsAnswers = applicationState.questions.map(question => {
                 return {
                     question: question.name,
                     answer: question.answer
@@ -120,7 +120,7 @@ const Contact = () => {
                     [field]: applicationState.contactDetails[field].value,
                 }
             })
-            const hireRequestDetails = { questions, requiredSkills, contactDetails };
+            const hireRequestDetails = { questionsAnswers, requiredSkills, contactDetails };
 
             await submitHireRequest(hireRequestDetails);
         }

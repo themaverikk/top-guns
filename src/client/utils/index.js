@@ -1,5 +1,4 @@
 const submitHireRequest = async hireRequestDetails => {
-    console.log("submitting hire request");
 
     await fetch("/api/hire", {
         method: "POST",
