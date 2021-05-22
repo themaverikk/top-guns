@@ -4,8 +4,9 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import PublishIcon from '@material-ui/icons/Publish';
 import Head from 'next/head';
 import Link from 'next/link';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useAppContext } from '../context/state';
+import { applyForJob } from '../utils';
 
 
 const useStyles = makeStyles(theme => ({
@@ -39,7 +40,7 @@ const CandidateApply = () => {
     const classes = useStyles();
 
     const { applicationState, setApplicationState } = useAppContext();
-    const resumeUploadInput = useRef(null);
+    const [resume, setResume] = useState(null);
     const [error, setError] = useState({
         name: false,
         email: false,
@@ -76,7 +77,7 @@ const CandidateApply = () => {
         for (const field in applicationState.candidateDetails) {
             validateField(field, applicationState.candidateDetails[field]);
         }
-        validateField("resume", resumeUploadInput.current.files[0]);
+        validateField("resume", resume);
     };
 
     const handleChange = field => event => {
@@ -95,14 +96,30 @@ const CandidateApply = () => {
         validateField(field, updatedValue);
     }
 
+    const handleFileChange = event => {
+        setResume(event.target.files[0]);
+        console.log('rfile ', event.target.files[0])
+    }
+
     const handleSubmit = async event => {
         event.preventDefault();
         validateFields();
 
-        const isFormValid = document.getElementById("hireContactForm").checkValidity();
+        const isFormValid = document.getElementById("candidateApplyForm").checkValidity();
 
         if (isFormValid) {
-            const candidateDetails = { ...applicationState.candidateDetails, resume: resumeUploadInput.current.files[0] };
+
+            const candidateDetails = new FormData();
+            Object.keys(applicationState.candidateDetails).forEach(field => candidateDetails.append(field, applicationState.candidateDetails[field]));
+            candidateDetails.append("resume", resume);
+
+            try {
+                await applyForJob(candidateDetails);
+                //TODO show success
+            } catch (err) {
+                //TODO show failure msg
+            }
+
         }
     }
 
@@ -116,13 +133,13 @@ const CandidateApply = () => {
             </Head>
 
             <main>
-                <form id="hireContactForm" onSubmit={handleSubmit}>
+                <form id="candidateApplyForm" onSubmit={handleSubmit}>
                     <FormControl component="fieldset" error={error.resume}>
                         {Object.keys(applicationState.candidateDetails).map(field =>
                             <TextField key={field} variant="outlined" required={true} label={applicationState.candidateDetails[field].label} defaultValue={applicationState.candidateDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} />
                         )}
 
-                        <input type="file" hidden accept="application/pdf" id="resume-upload" ref={resumeUploadInput} />
+                        <input type="file" hidden accept="application/pdf" id="resume-upload" onChange={handleFileChange} />
                         <label htmlFor="resume-upload">
                             <IconButton color="primary" className={classes.button} component="span">
                                 <PublishIcon />

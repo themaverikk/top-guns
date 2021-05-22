@@ -13,10 +13,7 @@ const applyForJob = async candidateDetails => {
 
     await fetch("/api/apply", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ candidateDetails }),
+        body: candidateDetails
     });
 }
 

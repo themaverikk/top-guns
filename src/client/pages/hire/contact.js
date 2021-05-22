@@ -121,7 +121,12 @@ const Contact = () => {
             })
             const hireRequestDetails = { questionsAnswers, requiredSkills, ...contactDetails };
 
-            await submitHireRequest(hireRequestDetails);
+            try {
+                await submitHireRequest(hireRequestDetails);
+                //TODO show success
+            } catch (err) {
+                //TODO show failure msg
+            }
         }
     }
 
