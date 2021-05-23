@@ -1,5 +1,5 @@
 const HireRequest = require('./database/models/HireRequest');
-const { uploadResumeToS3 } = require('./upload/resumeUpload');
+const { uploadResumeToS3 } = require('./utils/resumeUpload');
 
 const express = require('express');
 const path = require('path');
@@ -9,11 +9,21 @@ const port = 8000;
 app.use(express.json());
 const fileupload = require('express-fileupload');
 const CandidateApplication = require('./database/models/CandidateApplication');
+const { sendCandidateDetailsMail, sendHiringRequestMail } = require('./utils/mailSender');
 app.use(fileupload());
 
 app.post('/api/hire', async (req, res) => {
 
   try {
+    sendHiringRequestMail(req.body)
+      .then(() => {
+        console.log("Successfully sent email for hire request");
+      })
+      .catch(err => {
+        console.error("Error while sending email for hire request: ", err);
+
+      });
+
     const hireRequest = new HireRequest(req.body);
 
     await hireRequest.save();
@@ -39,19 +49,25 @@ app.post('/api/apply', async (req, res) => {
     const resumeFile = req.files.resume;
 
     const resumeUrl = await uploadResumeToS3(resumeFile);
-
-    const candidateApplication = new CandidateApplication({
+    const candidateData = {
       name,
       email,
       resumeUrl
-    });
+    };
+
+    sendCandidateDetailsMail(candidateData)
+      .then(() => {
+        console.log("Successfully sent email for candidate application");
+      })
+      .catch(err => {
+        console.error("Error while sending email for candidate application: ", err);
+
+      });
+
+    const candidateApplication = new CandidateApplication(candidateData);
 
     await candidateApplication.save();
     console.log("Successfully stored candidate application in DB");
-
-    res.json({
-      status: "success"
-    });
 
   } catch (err) {
     console.log("Error while serving request: ", err);
