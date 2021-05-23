@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik:400,400i,500");
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600");
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,500');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   color: #a0a6ad;
   font-size: 14px;
   font-weight: 400;
@@ -39,7 +39,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 40px;
   font-weight: 400;
   color: #151948;
@@ -118,7 +118,7 @@ a:not([href]):not([tabindex]):hover {
   font-size: 14px;
   padding: 10px 30px;
   border-radius: 4px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   letter-spacing: 1px;
   font-weight: 500;
   color: #fff;
@@ -269,7 +269,7 @@ button:focus {
 
 .btn-subtitle {
   color: #191c1e;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #dbecff;
   text-align: center;
   border-radius: 30px;
@@ -354,7 +354,7 @@ button:focus {
 
 #loader-1:before,
 #loader-1:after {
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   left: -10px;
@@ -466,13 +466,13 @@ button:focus {
   font-size: 16px;
   padding: 8px 0px;
   margin-left: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   position: relative;
   font-weight: 500;
 }
 
 .navbar-expand-md .navbar-nav .nav-link:before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1095,7 +1095,7 @@ button:focus {
   padding: 18px 20px 18px 28px;
 }
 #testimonial .video-play-button:before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 0;
   left: 50%;
@@ -1109,7 +1109,7 @@ button:focus {
   animation: pulse-border 1500ms ease-out infinite;
 }
 #testimonial .video-play-button:after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 1;
   left: 50%;
@@ -1622,8 +1622,8 @@ button:focus {
   margin-bottom: 30px;
 }
 
-#contact form#contactForm input[type="text"],
-#contact form#contactForm input[type="email"] {
+#contact form#contactForm input[type='text'],
+#contact form#contactForm input[type='email'] {
   min-height: 52px;
   padding: 0px 0 0 28px;
   font-size: 16px;
@@ -1681,7 +1681,7 @@ button:focus {
   height: 40px;
   margin-top: 18px;
 }
-#footer-Content .widget .subscribe-area input[type="email"] {
+#footer-Content .widget .subscribe-area input[type='email'] {
   background: #24153c;
   border: 1px solid #fff;
   color: #e2e2e2;
@@ -1723,4 +1723,28 @@ button:focus {
   -webkit-transition: all 300ms;
   -o-transition: all 300ms;
   transition: all 300ms;
+}
+
+/* ==========================================================================
+   Build 
+   ========================================================================== */
+#build {
+  padding-bottom: 130px;
+  font-family: 'Poppins', sans-serif;
+}
+#build .container-fluid {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+#build .business-item-info {
+  margin-top: 60px;
+}
+#build .business-item-info h3 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+#build .business-item-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }

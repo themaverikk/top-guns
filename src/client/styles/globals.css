@@ -6,6 +6,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  --primary: #244cec;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -18,39 +22,39 @@ a {
 /********************Fonts*************************/
 
 @font-face {
-  font-family: "Maison-Regular";
-  src: url("../public/fonts/maisonNeue/Montserrat-Regular.ttf");
+  font-family: 'Maison-Regular';
+  src: url('../public/fonts/maisonNeue/Montserrat-Regular.ttf');
   font-display: swap;
 }
 @font-face {
-  font-family: "Maison-Medium";
-  src: url("../public/fonts/maisonNeue/Montserrat-Medium.ttf");
+  font-family: 'Maison-Medium';
+  src: url('../public/fonts/maisonNeue/Montserrat-Medium.ttf');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Maison-Bold";
-  src: url("../public/fonts/maisonNeue/Montserrat-Bold.ttf");
+  font-family: 'Maison-Bold';
+  src: url('../public/fonts/maisonNeue/Montserrat-Bold.ttf');
   font-display: swap;
 }
 @font-face {
-  font-family: "Maison-SemiBold";
-  src: url("../public/fonts/maisonNeue/Montserrat-SemiBold.ttf");
+  font-family: 'Maison-SemiBold';
+  src: url('../public/fonts/maisonNeue/Montserrat-SemiBold.ttf');
   font-display: swap;
 }
 @font-face {
-  font-family: "Maison-Light";
-  src: url("../public/fonts/maisonNeue/Montserrat-Light.ttf");
+  font-family: 'Maison-Light';
+  src: url('../public/fonts/maisonNeue/Montserrat-Light.ttf');
   font-display: swap;
 }
 /**************************************************************/
 
-@import "./bootstrap.min.css";
-@import "./animate.css";
-@import "./LineIcons.css";
-@import "./magnific-popup.css";
-@import "./main.css";
-@import "./nivo-lightbox.css";
-@import "./owl.carousel.css";
-@import "./owl.theme.css";
-@import "./responsive.css";
+@import './bootstrap.min.css';
+@import './animate.css';
+@import './LineIcons.css';
+@import './magnific-popup.css';
+@import './main.css';
+@import './nivo-lightbox.css';
+@import './owl.carousel.css';
+@import './owl.theme.css';
+@import './responsive.css';
