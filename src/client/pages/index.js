@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head';
 import {
   Hero,
   Services,
@@ -10,7 +10,8 @@ import {
   Blog,
   Contact,
   Footer,
-} from "../Views";
+  Build,
+} from '../Views';
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
       </Head>
       <Hero />
       <Services />
+      <Build />
       <Business />
       <Features />
       <Showcase />
