@@ -38,3 +38,5 @@ yarn-error.log*
 
 # aws credentials
 /src/server/awsconfig.json
+
+out/

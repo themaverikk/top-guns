@@ -13,7 +13,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useAppContext } from '../../../context/state';
-import SkillTile from './SkillTile';
+import SkillTile from '../../../Components/SkillTile';
 
 const useStyles = makeStyles((theme) => ({
   root: {
