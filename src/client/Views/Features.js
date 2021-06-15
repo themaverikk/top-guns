@@ -81,7 +81,7 @@ export function Features() {
             {
               key: 4,
               tech: 'Java',
-              text: 'professionals sipping coffee and doing serious work.',
+              text: 'professionals sipping coffee and doing.',
               number: 1000,
               icon: 'lni lni-java',
             },

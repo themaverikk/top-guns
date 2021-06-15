@@ -78,7 +78,7 @@ export function Footer() {
               </div>
 
               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
-                <div class="widget">
+                {/* <div class="widget">
                   <h3 class="block-title">Subscribe Now</h3>
                   <p>
                     Appropriately implement calysts for change visa wireless
@@ -94,6 +94,17 @@ export function Footer() {
                       <i class="lni-chevron-right"></i>
                     </span>
                   </div>
+                </div> */}
+                <div class="widget">
+                  <h3 class="block-title">Contact Us</h3>
+                  <ul class="menu">
+                    <li>
+                      <a href="#">8750000375</a>
+                    </li>
+                    <li>
+                      <a href="#">support@topguns.com</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -103,14 +114,14 @@ export function Footer() {
             <div class="container">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="site-info text-center">
+                  {/* <div class="site-info text-center">
                     <p>
                       Crafted by
                       <a href="http://uideck.com" rel="nofollow">
                         UIdeck
                       </a>
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

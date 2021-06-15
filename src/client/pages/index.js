@@ -41,7 +41,7 @@ export default function Home() {
       <Business />
       <Features />
       <Showcase />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Team />
       <Blog />
       <Contact />

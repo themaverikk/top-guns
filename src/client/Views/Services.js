@@ -7,15 +7,15 @@ export function Services() {
             {
               key: 1,
               icon: '/img/services/step1.png',
-              heading: 'Create Requirement',
-              text: 'Create a requirement by filling a basic questionairre. It only take a couple of minutes, we promise!',
+              heading: 'Create',
+              text: 'Create a requirement by filling a basic questionairre. It only take a couple of minutes',
             },
             //    { key: 5, arrow: '/img/services/arrow1.png', arrow: true },
             {
               key: 2,
               icon: '/img/services/step2.png',
-              heading: 'Choose Professionals',
-              text: 'Choose Proffessionals from a curated list of vetted talent, with detailed assessment, reliability and efficiency scores.',
+              heading: 'Choose',
+              text: 'Choose Proffessionals from a curated list of vetted talent, with detailed assessment',
             },
 
             //    { key: 6, arrow: '/img/services/arrow2.png', arrow: true },
