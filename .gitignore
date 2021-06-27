@@ -35,6 +35,7 @@ yarn-error.log*
 .vercel
 
 .vscode
+.history
 
 # aws credentials
 /src/server/awsconfig.json
