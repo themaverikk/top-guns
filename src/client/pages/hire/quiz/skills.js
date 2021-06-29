@@ -55,7 +55,7 @@ const Skills = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
 
     const selectedSkills = applicationState.skills.filter(
