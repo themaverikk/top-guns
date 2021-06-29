@@ -57,7 +57,7 @@ const DevResources = () => {
   return (
     <div>
       <Head>
-        <title>Top Guns - Hire</title>
+        <title>James Bond- Hire</title>
         <meta name="description" content="Hire Top Engineers Remotely" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

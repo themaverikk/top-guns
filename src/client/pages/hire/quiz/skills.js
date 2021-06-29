@@ -75,7 +75,7 @@ const Skills = () => {
   return (
     <div>
       <Head>
-        <title>Top Guns Hire- Skills</title>
+        <title>James Bond Skills</title>
         <meta name="description" content="Hire Top Engineers Remotely" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

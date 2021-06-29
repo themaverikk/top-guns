@@ -61,7 +61,7 @@ export const Build = () => {
             <div className="row">
               {[
                 {
-                  key: 1,
+                  key: 0,
                   name: 'Perfect Man',
                   job: 'Remote Javascript Developer',
                   company: 'Tech Mahindra',
@@ -75,14 +75,14 @@ export const Build = () => {
                   image: 'https://picsum.photos/400',
                 },
                 {
-                  key: 1,
+                  key: 2,
                   name: 'Raftaar',
                   job: 'Remote MongoDB Developer',
                   company: 'Google',
                   image: 'https://picsum.photos/300',
                 },
                 {
-                  key: 1,
+                  key: 3,
                   name: 'Divine',
                   job: 'Remote Javascript Developer',
                   company: 'Facebook',
@@ -90,7 +90,7 @@ export const Build = () => {
                 },
               ].map((elem) => {
                 return (
-                  <div className="col-lg-6 col-md-12 pl-0 mt-2 ">
+                  <div key={elem.key} className="col-lg-6 col-md-12 pl-0 mt-2 ">
                     <div className="card text-center">
                       <img
                         className="text-center mx-auto mt-3"
