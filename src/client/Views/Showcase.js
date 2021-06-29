@@ -1,13 +1,13 @@
 export function Showcase() {
   return (
     <section id="showcase">
-      <div class="container-fluid right-position">
-        <div class="row gradient-bg">
-          <div class="col-lg-12">
-            <div class="showcase-text section-header text-center">
+      <div className="container-fluid right-position">
+        <div className="row gradient-bg">
+          <div className="col-lg-12">
+            <div className="showcase-text section-header text-center">
               <div>
-                <h2 class="section-title">Recent Works</h2>
-                <div class="desc-text">
+                <h2 className="section-title">Recent Works</h2>
+                <div className="desc-text">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed do
@@ -19,25 +19,25 @@ export function Showcase() {
           </div>
         </div>
 
-        <div class="row justify-content-center showcase-area">
-          <div class="col-lg-12 col-md-12 col-xs-12 pr-0">
-            <div class="showcase-slider owl-carousel">
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+        <div className="row justify-content-center showcase-area">
+          <div className="col-lg-12 col-md-12 col-xs-12 pr-0">
+            <div className="showcase-slider owl-carousel">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/01.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -45,22 +45,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/02.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/02.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/02.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -68,22 +68,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/03.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/03.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/03.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -91,22 +91,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/04.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/04.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/04.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -114,22 +114,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/05.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/05.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/05.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -137,22 +137,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/01.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -160,22 +160,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/02.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/02.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/02.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -183,22 +183,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/03.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/03.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/03.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -206,22 +206,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/04.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/04.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/04.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -229,22 +229,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/05.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/05.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/05.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -252,22 +252,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/01.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -275,22 +275,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/02.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -298,22 +298,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/03.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -321,22 +321,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/04.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -344,22 +344,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/05.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -367,22 +367,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/01.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -390,22 +390,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/02.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -413,22 +413,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/03.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -436,22 +436,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/04.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>
@@ -459,22 +459,22 @@ export function Showcase() {
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
+              <div className="item">
+                <div className="screenshot-thumb">
+                  <img src="img/showcase/05.jpg" className="img-fluid" alt="" />
+                  <div className="hover-content text-center">
+                    <div className="fancy-table">
+                      <div className="table-cell">
+                        <div className="single-text">
                           <p>Icon , Web</p>
                           <h5>Redesign Slack</h5>
                         </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg">
-                            <i class="lni-zoom-in"></i>
+                        <div className="zoom-icon">
+                          <a className="lightbox" href="img/showcase/01.jpg">
+                            <i className="lni-zoom-in"></i>
                           </a>
                           <a href="#">
-                            <i class="lni-link"></i>
+                            <i className="lni-link"></i>
                           </a>
                         </div>
                       </div>

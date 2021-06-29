@@ -37,7 +37,7 @@ export const Build = () => {
                   Satish Polymer <span>(CEO and Co- Founder)</span>
                 </p>
                 <p>
-                  <i class="lni lni-producthunt"></i>
+                  <i className="lni lni-producthunt"></i>
                   ProductHunt
                 </p>
 

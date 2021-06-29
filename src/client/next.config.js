@@ -2,7 +2,7 @@ module.exports = {
     async rewrites() {
         return [{
             source: '/api/:path*',
-            destination: 'http://localhost:8000/api/:path*' // Proxy to Backend
+            destination: 'http://server-container:8000/api/:path*' // Proxy to Backend
         }]
     },
     webpack: (config, options) => {

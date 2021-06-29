@@ -1,13 +1,13 @@
 export function Team() {
   return (
-    <section id="team" class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="team-text section-header text-center">
+    <section id="team" className="section">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="team-text section-header text-center">
               <div>
-                <h2 class="section-title">Team Members</h2>
-                <div class="desc-text">
+                <h2 className="section-title">Team Members</h2>
+                <div className="desc-text">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed do
@@ -19,137 +19,137 @@ export function Team() {
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team">
-              <div class="team-thumb">
-                <img src="img/team/01.jpg" class="img-fluid" alt="" />
+        <div className="row">
+          <div className="col-lg-3 col-md-6 col-xs-12">
+            <div className="single-team">
+              <div className="team-thumb">
+                <img src="img/team/01.jpg" className="img-fluid" alt="" />
               </div>
 
-              <div class="team-details">
-                <div class="team-social-icons">
-                  <ul class="social-list">
+              <div className="team-details">
+                <div className="team-social-icons">
+                  <ul className="social-list">
                     <li>
                       <a href="#">
-                        <i class="lni-facebook-filled"></i>
+                        <i className="lni-facebook-filled"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-twitter-filled"></i>
+                        <i className="lni-twitter-filled"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-google-plus"></i>
+                        <i className="lni-google-plus"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="team-inner text-center">
-                  <h5 class="team-title">Patric Green</h5>
+                <div className="team-inner text-center">
+                  <h5 className="team-title">Patric Green</h5>
                   <p>Lead Designer</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team">
-              <div class="team-thumb">
-                <img src="img/team/02.jpg" class="img-fluid" alt="" />
+          <div className="col-lg-3 col-md-6 col-xs-12">
+            <div className="single-team">
+              <div className="team-thumb">
+                <img src="img/team/02.jpg" className="img-fluid" alt="" />
               </div>
 
-              <div class="team-details">
-                <div class="team-social-icons">
-                  <ul class="social-list">
+              <div className="team-details">
+                <div className="team-social-icons">
+                  <ul className="social-list">
                     <li>
                       <a href="#">
-                        <i class="lni-facebook-filled"></i>
+                        <i className="lni-facebook-filled"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-twitter-filled"></i>
+                        <i className="lni-twitter-filled"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-google-plus"></i>
+                        <i className="lni-google-plus"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="team-inner text-center">
-                  <h5 class="team-title">Celina D Cruze</h5>
+                <div className="team-inner text-center">
+                  <h5 className="team-title">Celina D Cruze</h5>
                   <p>Front-end Developer</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team">
-              <div class="team-thumb">
-                <img src="img/team/03.jpg" class="img-fluid" alt="" />
+          <div className="col-lg-3 col-md-6 col-xs-12">
+            <div className="single-team">
+              <div className="team-thumb">
+                <img src="img/team/03.jpg" className="img-fluid" alt="" />
               </div>
 
-              <div class="team-details">
-                <div class="team-social-icons">
-                  <ul class="social-list">
+              <div className="team-details">
+                <div className="team-social-icons">
+                  <ul className="social-list">
                     <li>
                       <a href="#">
-                        <i class="lni-facebook-filled"></i>
+                        <i className="lni-facebook-filled"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-twitter-filled"></i>
+                        <i className="lni-twitter-filled"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-google-plus"></i>
+                        <i className="lni-google-plus"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="team-inner text-center">
-                  <h5 class="team-title">Daryl Dixon</h5>
+                <div className="team-inner text-center">
+                  <h5 className="team-title">Daryl Dixon</h5>
                   <p>Content Writer</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team">
-              <div class="team-thumb">
-                <img src="img/team/04.jpg" class="img-fluid" alt="" />
+          <div className="col-lg-3 col-md-6 col-xs-12">
+            <div className="single-team">
+              <div className="team-thumb">
+                <img src="img/team/04.jpg" className="img-fluid" alt="" />
               </div>
 
-              <div class="team-details">
-                <div class="team-social-icons">
-                  <ul class="social-list">
+              <div className="team-details">
+                <div className="team-social-icons">
+                  <ul className="social-list">
                     <li>
                       <a href="#">
-                        <i class="lni-facebook-filled"></i>
+                        <i className="lni-facebook-filled"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-twitter-filled"></i>
+                        <i className="lni-twitter-filled"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-google-plus"></i>
+                        <i className="lni-google-plus"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="team-inner text-center">
-                  <h5 class="team-title">Mark Parker</h5>
+                <div className="team-inner text-center">
+                  <h5 className="team-title">Mark Parker</h5>
                   <p>Support Engineer</p>
                 </div>
               </div>

@@ -9,7 +9,7 @@ import { useAppContext } from '../../../context/state';
 const RadioButtonQuestion = ({ question, handleChange }) => {
   return (<div key={question.name}>
     <FormLabel component="legend">{question.text}</FormLabel>
-    <RadioGroup aria-label={question.name} name={question.name} onChange={handleChange(question.name)}>
+    <RadioGroup aria-label={question.name} name={question.name} defaultValue={question.answer} onChange={handleChange(question.name)}>
       {question.options.map(option => <FormControlLabel key={option.value} value={option.value} control={<Radio required={false} />} label={option.label} />)}
     </RadioGroup></div>
   );
@@ -27,7 +27,6 @@ const DevResources = () => {
   const handleChange = questionName => event => {
 
     const updateQuestionIndex = applicationState.questions.findIndex(question => question.name === questionName);
-    console.log("questionName: ", questionName, " ,updateQuestionIndex: ", updateQuestionIndex)
 
     if (updateQuestionIndex > -1) {
       const updatedQuestion = { ...applicationState.questions[updateQuestionIndex], answer: event.target.value };

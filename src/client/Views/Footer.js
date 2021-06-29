@@ -3,18 +3,18 @@ export function Footer() {
     <>
       <footer>
         <section id="footer-Content">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
-                <div class="footer-logo">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                <div className="footer-logo">
                   <img src="img/footer-logo.png" alt="" />
                 </div>
               </div>
 
-              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
-                <div class="widget">
-                  <h3 class="block-title">Company</h3>
-                  <ul class="menu">
+              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                <div className="widget">
+                  <h3 className="block-title">Company</h3>
+                  <ul className="menu">
                     <li>
                       <a href="#"> - About Us</a>
                     </li>
@@ -31,10 +31,10 @@ export function Footer() {
                 </div>
               </div>
 
-              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
-                <div class="widget">
-                  <h3 class="block-title">Product</h3>
-                  <ul class="menu">
+              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                <div className="widget">
+                  <h3 className="block-title">Product</h3>
+                  <ul className="menu">
                     <li>
                       <a href="#"> - Customer Service</a>
                     </li>
@@ -54,10 +54,10 @@ export function Footer() {
                 </div>
               </div>
 
-              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
-                <div class="widget">
-                  <h3 class="block-title">Download App</h3>
-                  <ul class="menu">
+              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                <div className="widget">
+                  <h3 className="block-title">Download App</h3>
+                  <ul className="menu">
                     <li>
                       <a href="#"> - Android App</a>
                     </li>
@@ -77,27 +77,27 @@ export function Footer() {
                 </div>
               </div>
 
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
-                {/* <div class="widget">
-                  <h3 class="block-title">Subscribe Now</h3>
+              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                {/* <div className="widget">
+                  <h3 className="block-title">Subscribe Now</h3>
                   <p>
                     Appropriately implement calysts for change visa wireless
                     catalysts for change.
                   </p>
-                  <div class="subscribe-area">
+                  <div className="subscribe-area">
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       placeholder="Enter Email"
                     />
                     <span>
-                      <i class="lni-chevron-right"></i>
+                      <i className="lni-chevron-right"></i>
                     </span>
                   </div>
                 </div> */}
-                <div class="widget">
-                  <h3 class="block-title">Contact Us</h3>
-                  <ul class="menu">
+                <div className="widget">
+                  <h3 className="block-title">Contact Us</h3>
+                  <ul className="menu">
                     <li>
                       <a href="#">8750000375</a>
                     </li>
@@ -110,11 +110,11 @@ export function Footer() {
             </div>
           </div>
 
-          <div class="copyright">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  {/* <div class="site-info text-center">
+          <div className="copyright">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-12">
+                  {/* <div className="site-info text-center">
                     <p>
                       Crafted by
                       <a href="http://uideck.com" rel="nofollow">

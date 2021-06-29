@@ -1,20 +1,20 @@
 export function Business() {
   return (
     <section id="business-plan">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 pl-0 pt-70 pr-5">
-            <div class="business-item-img">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-md-12 pl-0 pt-70 pr-5">
+            <div className="business-item-img">
               <img
                 src="img/business/business-img.png"
-                class="img-fluid"
+                className="img-fluid"
                 alt=""
               />
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-12 pl-4">
-            <div class="business-item-info">
+          <div className="col-lg-6 col-md-12 pl-4">
+            <div className="business-item-info">
               <h3>Crafted For Business, Startup and Agency Websites</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -28,7 +28,7 @@ export function Business() {
                 velit esse cillum dolore eu fugiat nulla pariatur.
               </p>
 
-              <a class="btn btn-common" href="#">
+              <a className="btn btn-common" href="#">
                 download
               </a>
             </div>

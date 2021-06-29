@@ -1,13 +1,13 @@
 export function Blog() {
   return (
-    <section id="blog" class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="blog-text section-header text-center">
+    <section id="blog" className="section">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="blog-text section-header text-center">
               <div>
-                <h2 class="section-title">Latest Blog Posts</h2>
-                <div class="desc-text">
+                <h2 className="section-title">Latest Blog Posts</h2>
+                <div className="desc-text">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed do
@@ -19,15 +19,15 @@ export function Blog() {
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-            <div class="blog-item-wrapper">
-              <div class="blog-item-img">
+        <div className="row">
+          <div className="col-lg-4 col-md-6 col-xs-12 blog-item">
+            <div className="blog-item-wrapper">
+              <div className="blog-item-img">
                 <a href="single-post.html">
-                  <img src="img/blog/01.jpg" class="img-fluid" alt="" />
+                  <img src="img/blog/01.jpg" className="img-fluid" alt="" />
                 </a>
               </div>
-              <div class="blog-item-text">
+              <div className="blog-item-text">
                 <h3>
                   <a href="single-post.html">
                     How Slick Will Transform <br />
@@ -38,31 +38,31 @@ export function Blog() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry.
                 </p>
-                <a href="" class="read-more">
+                <a href="" className="read-more">
                   5 Min read
                 </a>
               </div>
-              <div class="author">
-                <span class="name">
-                  <i class="lni-user"></i>
+              <div className="author">
+                <span className="name">
+                  <i className="lni-user"></i>
                   <a href="#">Posted by Admin</a>
                 </span>
-                <span class="date float-right">
-                  <i class="lni-calendar"></i>
+                <span className="date float-right">
+                  <i className="lni-calendar"></i>
                   <a href="#">10 April, 2020</a>
                 </span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-            <div class="blog-item-wrapper">
-              <div class="blog-item-img">
+          <div className="col-lg-4 col-md-6 col-xs-12 blog-item">
+            <div className="blog-item-wrapper">
+              <div className="blog-item-img">
                 <a href="single-post.html">
-                  <img src="img/blog/02.jpg" class="img-fluid" alt="" />
+                  <img src="img/blog/02.jpg" className="img-fluid" alt="" />
                 </a>
               </div>
-              <div class="blog-item-text">
+              <div className="blog-item-text">
                 <h3>
                   <a href="single-post.html">
                     Growth Techniques for <br />
@@ -73,31 +73,31 @@ export function Blog() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry.
                 </p>
-                <a href="" class="read-more">
+                <a href="" className="read-more">
                   5 Min read
                 </a>
               </div>
-              <div class="author">
-                <span class="name">
-                  <i class="lni-user"></i>
+              <div className="author">
+                <span className="name">
+                  <i className="lni-user"></i>
                   <a href="#">Posted by Admin</a>
                 </span>
-                <span class="date float-right">
-                  <i class="lni-calendar"></i>
+                <span className="date float-right">
+                  <i className="lni-calendar"></i>
                   <a href="#">10 April, 2020</a>
                 </span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-            <div class="blog-item-wrapper">
-              <div class="blog-item-img">
+          <div className="col-lg-4 col-md-6 col-xs-12 blog-item">
+            <div className="blog-item-wrapper">
+              <div className="blog-item-img">
                 <a href="single-post.html">
-                  <img src="img/blog/03.jpg" class="img-fluid" alt="" />
+                  <img src="img/blog/03.jpg" className="img-fluid" alt="" />
                 </a>
               </div>
-              <div class="blog-item-text">
+              <div className="blog-item-text">
                 <h3>
                   <a href="single-post.html">
                     Writing Professional <br />
@@ -108,17 +108,17 @@ export function Blog() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry.
                 </p>
-                <a href="" class="read-more">
+                <a href="" className="read-more">
                   5 Min read
                 </a>
               </div>
-              <div class="author">
-                <span class="name">
-                  <i class="lni-user"></i>
+              <div className="author">
+                <span className="name">
+                  <i className="lni-user"></i>
                   <a href="#">Posted by Admin</a>
                 </span>
-                <span class="date float-right">
-                  <i class="lni-calendar"></i>
+                <span className="date float-right">
+                  <i className="lni-calendar"></i>
                   <a href="#">10 April, 2020</a>
                 </span>
               </div>
