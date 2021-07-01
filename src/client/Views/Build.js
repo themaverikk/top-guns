@@ -3,7 +3,7 @@ export const Build = () => {
     <section id="build">
       <div className="container">
         <div className="row justify-content-center">
-          <h3 className="mx-2">Build Amazing Teams, on demand</h3>
+          <h3 className="mx-2">Scale Remote teams, on demand</h3>
 
           <div className="col-lg-6 col-md-12 pl-4">
             <div className="business-item-info">
@@ -47,9 +47,9 @@ export const Build = () => {
                   }}
                   className="p-3"
                 >
-                  “We were struggling with our e-learning product. We hired a team of 5 engineers in-house, most of them turned out to be bad hires and had to be fired 😢 <br/>
+                  “We were struggling with our e-learning product. We hired a team of 5 engineers in-house, most of them turned out to be bad hires and had to be fired 😢 <br />
                   In the end, we were left with like 27 days to demo the product to the investers and 2 not so great engineers. We contacted hirejamesbond, took 3 engineers for trial, covered decent ground in first week itself.
-                  We hired them 😍<br/>and Boom 🎉🎉🎉🎉 <br/>These engineers helped our in-house team as well and we rocked the demo!
+                  We hired them 😍<br />and Boom 🎉🎉🎉🎉 <br />These engineers helped our in-house team as well and we rocked the demo!
                   ”
                 </div>
               </div>
