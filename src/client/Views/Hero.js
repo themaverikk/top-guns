@@ -72,7 +72,7 @@ export function Hero() {
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="contents">
               <h2 className="head-title">
-                Build Your Remote Team in Less Than 24 Hours
+                Build Your Remote Engineering Team in less than 24 Hours
               </h2>
               <p>
                 Got an idea to change the world? We'll handle the rest!

@@ -17,14 +17,13 @@ export const Build = () => {
                 PRE VETTED POOL
               </h5>
               <p>
-                A team is as good as its talent so we connect you with the best
-                of the best with our pre assessed pool of talent.
+                Do you know of a better professional than James Bond? Our professionals have a similar bar. Take a free 7 days trial and you won't regret it!
               </p>
 
               <div>
                 <img
                   className="text-center mx-auto mt-3"
-                  src="https://picsum.photos/200"
+                  src="img/team/arvind.jpeg"
                   alt="Card image cap"
                   style={{
                     width: '80px',
@@ -34,11 +33,11 @@ export const Build = () => {
                   }}
                 />
                 <p className="m-1">
-                  Satish Polymer <span>(CEO and Co- Founder)</span>
+                  Arvind Kumar <span>(CEO and Co- Founder)</span>
                 </p>
                 <p>
                   <i className="lni lni-producthunt"></i>
-                  ProductHunt
+                  Acadbee
                 </p>
 
                 <div
@@ -48,11 +47,10 @@ export const Build = () => {
                   }}
                   className="p-3"
                 >
-                  “With CrewScale, we got a team of highly skilled developers to
-                  fulfill our Tech requirements in a short period of time. The
-                  performance and professionalism of the team were of the
-                  highest caliber. Totally recommend CrewScale if you are
-                  looking for quality to scale”
+                  “We were struggling with our e-learning product. We hired a team of 5 engineers in-house, most of them turned out to be bad hires and had to be fired 😢 <br/>
+                  In the end, we were left with like 27 days to demo the product to the investers and 2 not so great engineers. We contacted hirejamesbond, took 3 engineers for trial, covered decent ground in first week itself.
+                  We hired them 😍<br/>and Boom 🎉🎉🎉🎉 <br/>These engineers helped our in-house team as well and we rocked the demo!
+                  ”
                 </div>
               </div>
             </div>
@@ -62,31 +60,31 @@ export const Build = () => {
               {[
                 {
                   key: 0,
-                  name: 'Perfect Man',
-                  job: 'Remote Javascript Developer',
-                  company: 'Tech Mahindra',
+                  name: 'Devender',
+                  job: 'Senior Staff Software Engineer',
+                  company: 'Google',
                   image: 'https://picsum.photos/200',
                 },
                 {
                   key: 1,
-                  name: 'Honey Singh',
-                  job: 'Remote Angular Developer',
-                  company: 'Microsoft',
-                  image: 'https://picsum.photos/400',
+                  name: 'Suhas',
+                  job: 'Senior Full-stack Engineer',
+                  company: 'Amazon',
+                  image: 'img/team/suhas.jpeg',
                 },
                 {
                   key: 2,
-                  name: 'Raftaar',
-                  job: 'Remote MongoDB Developer',
-                  company: 'Google',
-                  image: 'https://picsum.photos/300',
+                  name: 'Lana',
+                  job: 'Angular Developer',
+                  company: 'Architech',
+                  image: 'img/team/lana.jpg',
                 },
                 {
                   key: 3,
-                  name: 'Divine',
+                  name: 'Daria',
                   job: 'Remote Javascript Developer',
-                  company: 'Facebook',
-                  image: 'https://picsum.photos/600',
+                  company: 'SimbirSoft',
+                  image: 'img/team/daria.jpeg',
                 },
               ].map((elem) => {
                 return (

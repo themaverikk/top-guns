@@ -94,8 +94,8 @@ export function Features() {
             },
             {
               key: 6,
-              tech: 'Product Managers',
-              text: 'professionals handling complex teams',
+              tech: 'Flutter',
+              text: 'professionals building next gen UI',
               number: 1000,
               icon: 'lni lni-slack',
             },

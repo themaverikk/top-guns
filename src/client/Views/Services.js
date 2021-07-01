@@ -23,7 +23,7 @@ export function Services() {
               key: 3,
               icon: '/img/services/step3.png',
               heading: 'Off You GO',
-              text: 'Start building your product full-steam. 7 days free trial, No questions asked!',
+              text: 'Start building your product full-steam. 7 days free trial, Pay only if satisfied!',
             },
           ].map((elem) => {
             return (
