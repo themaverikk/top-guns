@@ -1,13 +1,13 @@
 export function Testimonials() {
   return (
-    <section id="testimonial" class="section">
-      <div class="container right-position">
-        <div class="row">
-          <div class="col-md-12 col-sm-12">
-            <div class="video-promo-content text-center">
+    <section id="testimonial" className="section">
+      <div className="container right-position">
+        <div className="row">
+          <div className="col-md-12 col-sm-12">
+            <div className="video-promo-content text-center">
               <a
                 id="play-video"
-                class="video-play-button video-popup"
+                className="video-play-button video-popup"
                 href="https://www.youtube.com/watch?v=Y4fodpIwal8&list=RDXCElIIYx_8s&index=13"
               >
                 <span></span>
@@ -16,16 +16,16 @@ export function Testimonials() {
           </div>
         </div>
 
-        <div class="row justify-content-center testimonial-area">
+        <div className="row justify-content-center testimonial-area">
           <div
-            class="col-lg-10 col-md-12 col-sm-12 col-xs-12 pr-20 pl-20"
+            className="col-lg-10 col-md-12 col-sm-12 col-xs-12 pr-20 pl-20"
             style={{ overflow: "hidden", paddingBottom: "60px" }}
           >
-            <div id="client-testimonial" class="text-center owl-carousel">
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content-inner">
-                    <p class="description">
+            <div id="client-testimonial" className="text-center owl-carousel">
+              <div className="item">
+                <div className="testimonial-item">
+                  <div className="content-inner">
+                    <p className="description">
                       Appropriately implement one-to-one catalysts for change
                       <br />
                       vis-a-vis wireless catalysts for change. Enthusiastically
@@ -34,21 +34,21 @@ export function Testimonials() {
                       Appropriately <br />
                       implement one-to-one catalysts for change.
                     </p>
-                    <div class="author-info">
+                    <div className="author-info">
                       <h5>
                         Tahmina Anny ; <span> UIdeck Customer</span>
                       </h5>
                     </div>
                   </div>
-                  <div class="client-thumb">
+                  <div className="client-thumb">
                     <img src="img/testimonial/01.png" alt="" />
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content-inner">
-                    <p class="description">
+              <div className="item">
+                <div className="testimonial-item">
+                  <div className="content-inner">
+                    <p className="description">
                       Appropriately implement one-to-one catalysts for change
                       <br />
                       vis-a-vis wireless catalysts for change. Enthusiastically
@@ -57,21 +57,21 @@ export function Testimonials() {
                       Appropriately <br />
                       implement one-to-one catalysts for change.
                     </p>
-                    <div class="author-info">
+                    <div className="author-info">
                       <h5>
                         Tahmina Anny ; <span> UIdeck Customer</span>
                       </h5>
                     </div>
                   </div>
-                  <div class="client-thumb">
+                  <div className="client-thumb">
                     <img src="img/testimonial/01.png" alt="" />
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content-inner">
-                    <p class="description">
+              <div className="item">
+                <div className="testimonial-item">
+                  <div className="content-inner">
+                    <p className="description">
                       Appropriately implement one-to-one catalysts for change
                       <br />
                       vis-a-vis wireless catalysts for change. Enthusiastically
@@ -80,21 +80,21 @@ export function Testimonials() {
                       Appropriately <br />
                       implement one-to-one catalysts for change.
                     </p>
-                    <div class="author-info">
+                    <div className="author-info">
                       <h5>
                         Tahmina Anny ; <span> UIdeck Customer</span>
                       </h5>
                     </div>
                   </div>
-                  <div class="client-thumb">
+                  <div className="client-thumb">
                     <img src="img/testimonial/01.png" alt="" />
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content-inner">
-                    <p class="description">
+              <div className="item">
+                <div className="testimonial-item">
+                  <div className="content-inner">
+                    <p className="description">
                       Appropriately implement one-to-one catalysts for change
                       <br />
                       vis-a-vis wireless catalysts for change. Enthusiastically
@@ -103,21 +103,21 @@ export function Testimonials() {
                       Appropriately <br />
                       implement one-to-one catalysts for change.
                     </p>
-                    <div class="author-info">
+                    <div className="author-info">
                       <h5>
                         Tahmina Anny ; <span> UIdeck Customer</span>
                       </h5>
                     </div>
                   </div>
-                  <div class="client-thumb">
+                  <div className="client-thumb">
                     <img src="img/testimonial/01.png" alt="" />
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content-inner">
-                    <p class="description">
+              <div className="item">
+                <div className="testimonial-item">
+                  <div className="content-inner">
+                    <p className="description">
                       Appropriately implement one-to-one catalysts for change
                       <br />
                       vis-a-vis wireless catalysts for change. Enthusiastically
@@ -126,21 +126,21 @@ export function Testimonials() {
                       Appropriately <br />
                       implement one-to-one catalysts for change.
                     </p>
-                    <div class="author-info">
+                    <div className="author-info">
                       <h5>
                         Tahmina Anny ; <span> UIdeck Customer</span>
                       </h5>
                     </div>
                   </div>
-                  <div class="client-thumb">
+                  <div className="client-thumb">
                     <img src="img/testimonial/01.png" alt="" />
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content-inner">
-                    <p class="description">
+              <div className="item">
+                <div className="testimonial-item">
+                  <div className="content-inner">
+                    <p className="description">
                       Appropriately implement one-to-one catalysts for change
                       <br />
                       vis-a-vis wireless catalysts for change. Enthusiastically
@@ -149,13 +149,13 @@ export function Testimonials() {
                       Appropriately <br />
                       implement one-to-one catalysts for change.
                     </p>
-                    <div class="author-info">
+                    <div className="author-info">
                       <h5>
                         Tahmina Anny ; <span> UIdeck Customer</span>
                       </h5>
                     </div>
                   </div>
-                  <div class="client-thumb">
+                  <div className="client-thumb">
                     <img src="img/testimonial/01.png" alt="" />
                   </div>
                 </div>

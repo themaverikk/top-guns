@@ -25,7 +25,8 @@
       itemsTablet: [767,1],
       itemsTabletSmall: [480,1],
       itemsMobile : [479,1],
-    });   
+    });
+    debugger;
     $('#client-testimonial').find('.owl-prev').html('<i class="lni-chevron-left"></i>');
     $('#client-testimonial').find('.owl-next').html('<i class="lni-chevron-right"></i>');
 

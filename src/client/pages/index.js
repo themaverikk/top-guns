@@ -34,6 +34,12 @@ export default function Home() {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
+        <script type="text/javascript" src="../js/jquery-min.js" />
+        <script type="text/javascript" src="../js/bootstrap.min.js" />
+        <script type="text/javascript" src="../js/owl.carousel.js" />
+        <script type="text/javascript" src="../js/jquery.magnific-popup.min.js" />
+        <script type="text/javascript" src="../js/nivo-lightbox.js" />
+        <script type="text/javascript" src="../js/main.js" />
       </Head>
       <Hero />
       <Services />
@@ -41,7 +47,7 @@ export default function Home() {
       {/* <Business /> */}
       <Features />
       <Showcase />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Team />
       <Blog />
       <Contact />
