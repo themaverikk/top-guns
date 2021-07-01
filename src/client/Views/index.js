@@ -1,6 +1,6 @@
 export * from './Hero';
 export * from './Services';
-export * from './Business';
+// export * from './Business';
 export * from './Features';
 export * from './Showcase';
 export * from './Testimonials';

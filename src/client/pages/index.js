@@ -2,7 +2,7 @@ import Head from 'next/head';
 import {
   Hero,
   Services,
-  Business,
+  // Business,
   Features,
   Showcase,
   Testimonials,
@@ -38,7 +38,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Build />
-      <Business />
+      {/* <Business /> */}
       <Features />
       <Showcase />
       {/* <Testimonials /> */}
