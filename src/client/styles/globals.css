@@ -55,6 +55,6 @@ a {
 @import './magnific-popup.css';
 @import './main.css';
 @import './nivo-lightbox.css';
-@import './owl.carousel.css';
+@import './owl.carousel.min.css';
 @import './owl.theme.css';
 @import './responsive.css';
