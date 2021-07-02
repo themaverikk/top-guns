@@ -2,7 +2,7 @@ export function Testimonials() {
   return (
     <section id="testimonial" className="section">
       <div className="container right-position">
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-12 col-sm-12">
             <div className="video-promo-content text-center">
               <a
@@ -14,11 +14,10 @@ export function Testimonials() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="row justify-content-center testimonial-area">
+        <div className="row justify-content-center">
           <div
-            className="col-lg-10 col-md-12 col-sm-12 col-xs-12 pr-20 pl-20"
             style={{ overflow: "hidden", paddingBottom: "60px" }}
           >
             <div id="client-testimonial" className="text-center owl-carousel">

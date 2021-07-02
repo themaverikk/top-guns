@@ -8,25 +8,15 @@
 
   /* Testimonials Carousel 
   ========================================================*/
-  var owl = $("#client-testimonial");
+  var owl = $(".owl-carousel");
     owl.owlCarousel({
-      navigation: true,
-      pagination: false,
-      slideSpeed: 1000,
-      stopOnHover: true,
-      autoPlay: true,
-      items: 1,
-      animateIn: 'fadeIn',
-      animateOut: 'fadeOut',
-      addClassActive: true,
-      itemsDesktop : [1199,1],
-      itemsDesktopSmall : [980,1],
-      itemsTablet: [768,1],
-      itemsTablet: [767,1],
-      itemsTabletSmall: [480,1],
-      itemsMobile : [479,1],
+      items:4,
+      loop:true,
+      margin:10,
+      autoplay:true,
+      autoplayTimeout:1000,
+      autoplayHoverPause:true
     });
-    debugger;
     $('#client-testimonial').find('.owl-prev').html('<i class="lni-chevron-left"></i>');
     $('#client-testimonial').find('.owl-next').html('<i class="lni-chevron-right"></i>');
 
