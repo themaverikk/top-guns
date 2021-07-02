@@ -428,7 +428,7 @@ button:focus {
 
 .menu-bg {
   background: #5533ff;
-  background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%) !important;
+  /* background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%) !important; */
   box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
   z-index: 9999;
   padding: 5px;
@@ -537,12 +537,12 @@ button:focus {
   top: 0px;
   left: 0px;
   background: #5533ff;
-  background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%);
-  -webkit-transform: skewY(-12deg);
+  background: linear-gradient(95deg, #5533ff 40%, #6f52ff 100%);
+  /* -webkit-transform: skewY(-12deg);
   transform: skewY(-12deg);
   -webkit-transform-origin: 0;
   transform-origin: 0;
-  z-index: -12;
+  z-index: -12; */
 }
 .hero-area .overlay :nth-child(1) {
   width: 33.33333%;
@@ -552,7 +552,7 @@ button:focus {
   left: calc(calc(100% / 3) / 2);
   right: auto;
   background: #5533ff;
-  background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%);
+  /* background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%); */
   height: 200px;
 }
 .hero-area .overlay :nth-child(2) {
@@ -560,7 +560,7 @@ button:focus {
   width: calc(100% / 3);
   bottom: 0;
   background: #5533ff;
-  background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%);
+  /* background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%); */
   position: absolute;
   height: 155px;
   left: 3%;
@@ -897,7 +897,7 @@ button:focus {
 }
 #showcase .gradient-bg {
   background: #5533ff;
-  background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%);
+  /* background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%); */
   padding: 119px 0px 80px 0px;
 }
 #showcase .showcase-slider .owl-controls .owl-page.active span,

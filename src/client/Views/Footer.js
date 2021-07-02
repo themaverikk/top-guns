@@ -5,73 +5,85 @@ export function Footer() {
         <section id="footer-Content">
           <div className="container">
             <div className="row">
-              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              {/* <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <div className="footer-logo">
                   <img src="img/footer-logo.png" alt="" />
                 </div>
-              </div>
+              </div> */}
 
-              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <div className="widget">
                   <h3 className="block-title">Company</h3>
                   <ul className="menu">
                     <li>
-                      <a href="#"> - About Us</a>
+                      <a href="#"> About Us</a>
                     </li>
                     <li>
-                      <a href="#">- Career</a>
+                      <a href="#"> Clients</a>
                     </li>
                     <li>
-                      <a href="#">- Blog</a>
+                      <a href="#"> Team</a>
                     </li>
                     <li>
-                      <a href="#">- Press</a>
+                      <a href="#"> Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#"> Terms & Conditions</a>
+                    </li>
+                    <li>
+                      <a href="#"> Terms Of Use</a>
+                    </li>
+                    <li>
+                      <a href="#"> Career</a>
+                    </li>
+                    <li>
+                      <a href="#"> Blog</a>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <div className="widget">
                   <h3 className="block-title">Product</h3>
                   <ul className="menu">
                     <li>
-                      <a href="#"> - Customer Service</a>
+                      <a href="#"> Customer Service</a>
                     </li>
                     <li>
-                      <a href="#">- Enterprise</a>
+                      <a href="#"> Enterprise</a>
                     </li>
                     <li>
-                      <a href="#">- Price</a>
+                      <a href="#"> Price</a>
                     </li>
                     <li>
-                      <a href="#">- Scurity</a>
+                      <a href="#"> Scurity</a>
                     </li>
                     <li>
-                      <a href="#">- Why SLICK?</a>
+                      <a href="#"> Why SLICK?</a>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <div className="widget">
                   <h3 className="block-title">Download App</h3>
                   <ul className="menu">
                     <li>
-                      <a href="#"> - Android App</a>
+                      <a href="#"> Android App</a>
                     </li>
                     <li>
-                      <a href="#">- IOS App</a>
+                      <a href="#"> IOS App</a>
                     </li>
                     <li>
-                      <a href="#">- Windows App</a>
+                      <a href="#"> Windows App</a>
                     </li>
                     <li>
-                      <a href="#">- Play Store</a>
+                      <a href="#"> Play Store</a>
                     </li>
                     <li>
-                      <a href="#">- IOS Store</a>
+                      <a href="#"> IOS Store</a>
                     </li>
                   </ul>
                 </div>
@@ -99,6 +111,9 @@ export function Footer() {
                   <h3 className="block-title">Contact Us</h3>
                   <ul className="menu">
                     <li>
+                      <a href="#">VPO Rajgarh,Julana, Jind (HR)</a>
+                    </li>
+                    <li>
                       <a href="#">8750000375</a>
                     </li>
                     <li>
@@ -114,14 +129,11 @@ export function Footer() {
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
-                  {/* <div className="site-info text-center">
+                  <div className="site-info text-center">
                     <p>
-                      Crafted by
-                      <a href="http://uideck.com" rel="nofollow">
-                        UIdeck
-                      </a>
+                    © Copyrights 2021 All rights reserved.<a href="http://hirejamesbond.com" rel="nofollow"></a>
                     </p>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>

@@ -80,34 +80,59 @@ const Skills = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <form onSubmit={handleSubmit}>
-          <FormControl component="fieldset" error={error}>
-            <Box component="div" display="block" className={classes.root}>
-              <GridList className={classes.gridList} cols={4}>
-                {applicationState.skills.map((skill, index) => (
-                  <SkillTile
-                    key={skill.id}
-                    skill={skill}
-                    toggleSkill={() => toggleSkill(index)}
-                  />
-                ))}
-              </GridList>
-            </Box>
-            {error && (
-              <FormHelperText>Please select at least one skill</FormHelperText>
-            )}
-            <Link href="/hire/quiz/dev-resources" passHref>
-              <IconButton aria-label="back">
-                <ArrowBackIosIcon />
-              </IconButton>
-            </Link>
-            <Button type="submit" variant="contained" color="primary">
-              Next
-            </Button>
-          </FormControl>
-        </form>
-      </main>
+    <main>
+      <section id="business-plan" style={{padding: '0px'}}>
+        <div className="row">
+          <div className="col-lg-8 col-md-12 pl-0 pt-70 pr-5">
+            <div style={{
+                fontFamily: 'Maison-Bold',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                <form onSubmit={handleSubmit}>
+                  <FormControl component="fieldset" error={error}>
+                    <Box component="div" display="block" className={classes.root}>
+                      <GridList className={classes.gridList} cols={4}>
+                        {applicationState.skills.map((skill, index) => (
+                          <SkillTile
+                            key={skill.id}
+                            skill={skill}
+                            toggleSkill={() => toggleSkill(index)}
+                          />
+                        ))}
+                      </GridList>
+                    </Box>
+                    {error && (
+                      <FormHelperText>Please select at least one skill</FormHelperText>
+                    )}
+                    <Link href="/hire/quiz/dev-resources" passHref>
+                      <IconButton aria-label="back">
+                        <ArrowBackIosIcon />
+                      </IconButton>
+                    </Link>
+                    <Button type="submit" variant="contained" color="primary">
+                      Next
+                    </Button>
+                  </FormControl>
+                </form>
+              </div>
+          </div>
+
+          <div className="col-lg-4 col-md-12 pl-4" style={{background: 'linear-gradient(-1deg,#394458,#191e28 96%)', height:'637px' , minHeight: '100%'}}>
+            <div className="business-item-info" background="primary">
+              <div className="business-item-img" background="primary">
+                <img
+                  src="img/business/business-img.png"
+                  className="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     </div>
   );
 };
