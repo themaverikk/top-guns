@@ -40,7 +40,7 @@ export function Testimonials() {
                     </div>
                   </div>
                   <div className="client-thumb">
-                    <img src="img/testimonial/01.png" alt="" />
+                    <img src="img/testimonial/raghav.jpeg" alt="" />
                   </div>
                 </div>
               </div>

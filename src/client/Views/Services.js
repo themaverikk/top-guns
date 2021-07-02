@@ -27,7 +27,7 @@ export function Services() {
             },
           ].map((elem) => {
             return (
-              <div className="col-lg-3 col-md-6 col-xs-12" key={elem.key}>
+              <div className="col-lg-4 col-md-8 col-xs-16" key={elem.key}>
                 <div className="services-item text-center">
                   <div className="">
                     <img src={elem.icon} />
