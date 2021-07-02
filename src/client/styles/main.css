@@ -968,15 +968,9 @@ button:focus {
 }
 
 #showcase .gradient-bg {
-<<<<<<< HEAD
-  background: #5533ff;
-  /* background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%); */
-  padding: 119px 0px 80px 0px;
-=======
     background: #5533ff;
-    background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%);
+    /* background: linear-gradient(95deg, #5533ff 40%, #25ddf5 100%); */
     padding: 119px 0px 80px 0px;
->>>>>>> 43e77d4a71358d443d22d47881b147f7a009eef8
 }
 
 #showcase .showcase-slider .owl-controls .owl-page.active span,
