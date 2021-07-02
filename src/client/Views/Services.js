@@ -25,12 +25,6 @@ export function Services() {
               heading: 'Off You GO',
               text: 'Start building your product full-steam. 7 days free trial, Pay only if satisfied!',
             },
-            {
-              key: 4,
-              icon: '/img/services/step3.png',
-              heading: 'Off You GO',
-              text: 'Start building your product full-steam. 7 days free trial, Pay only if satisfied!',
-            },
           ].map((elem) => {
             return (
               <div className="col-lg-4 col-md-8 col-xs-16" key={elem.key}>
