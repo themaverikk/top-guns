@@ -117,15 +117,15 @@ const DevResources = () => {
           </div>
 
           <div className="row col-lg-4 col-md-12 pl-4 text-center" style={{background: 'linear-gradient(-1deg,#394458,#191e28 96%)', height:'637px' , minHeight: '100%', paddingTop: '100px', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '100px'}}>
-            <div className="col-12">TRUSTED BY</div>
-            <div className="col-6"><img src="img/business/business-img.png" className="img-fluid" alt="" style={{minHeight: '70px', minWidth: '100px'}}/></div>
-            <div className="col-6">test3</div>
-            <div className="col-6">test4</div>
-            <div className="col-6">test5</div>
-            <div className="col-6">test2</div>
-            <div className="col-6">test3</div>
-            <div className="col-6">test4</div>
-            <div className="col-6">test5</div>
+            <div className="col-12 h6">TRUSTED BY</div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
           </div>
       </div>
     </section>
