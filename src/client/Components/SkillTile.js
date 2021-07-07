@@ -16,14 +16,17 @@ const useStyles = makeStyles((theme) => ({
         cursor: "pointer",
         borderRadius: "5px",
         backgroundColor: "#fff",
+        fontWeight:"100",
+        float:"right"
     },
     icon: {
         width: "30px",
         height: "30px",
-        marginBottom: "8px"
+        marginBottom: "px",
+        float:"left"
     },
     selected: {
-        backgroundColor: 'red',
+        backgroundColor: 'green',
     }
 
 }));
@@ -31,12 +34,18 @@ const SkillTile = ({ skill, toggleSkill }) => {
     const classes = useStyles();
 
     return (
-        <GridListTile classes={{
+        <GridListTile style={{height: '70px',minWidth:'200px',paddingTop:'15px'}} classes={{
             root: classes.root,
             tile: clsx(classes.tile, { [classes.selected]: skill.isSelected })
         }} cols={skill.cols || 1} onClick={toggleSkill} >
-            <img key={skill.img} src={skill.img} alt={skill.title} className={classes.icon} />
-            <Box component="div" display="block">{skill.title}</Box>
+            <div className="row col-12" style={{background: '#394458',height: '70px',minWidth:'200px'}}>
+                <div className="col-4">
+                    <img key={skill.img} src={skill.img} alt={skill.title} className={classes.icon} style={{marginTop:'10px'}} />
+                </div>
+                <div className="col-8 text-center">
+                    <Box component="div" display="block" style={{paddingTop:'10px'}}>{skill.title}</Box>
+                </div>
+            </div>
         </GridListTile >
     );
 }

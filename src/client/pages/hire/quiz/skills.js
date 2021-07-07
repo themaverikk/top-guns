@@ -24,8 +24,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: 500,
-    height: 450,
+    width: '80%',
+    // height: 450,
+    paddingLeft:'50px',
+    fontSize:'14px',
   },
 }));
 
@@ -83,17 +85,25 @@ const Skills = () => {
     <main>
       <section id="business-plan" style={{padding: '0px'}}>
         <div className="row">
-          <div className="col-lg-8 col-md-12 pl-0 pt-70 pr-5">
-            <div style={{
-                fontFamily: 'Maison-Bold',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+          <div className="col-lg-8 col-md-12">
+              <div className="col-lg-12 col-md-12 pt-70 pr-5 text-center" style={{paddingLeft:'220px'}}>
+                  <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+              </div>
+              <div className="col-lg-12 col-md-12 pl-0 pr-5 text-center" style={{paddingTop:'30px'}}>
+                  <h5 className="text-center font-18">Thank you for your interest in Hire James Bond.</h5>
+                  <h6 className="text-center font-16 pl-0 pt-30 pr-5">We do not yet offer top talent in India</h6>
+              </div>
+              <div style={{
+                  fontFamily: 'Maison-Bold',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingTop:'40px'
               }}>
                 <form onSubmit={handleSubmit}>
-                  <FormControl component="fieldset" error={error}>
+                  <FormControl component="fieldset" error={error} style={{alignItems:'center'}}>
                     <Box component="div" display="block" className={classes.root}>
-                      <GridList className={classes.gridList} cols={4}>
+                      <GridList className={classes.gridList} cols={4} style={{fontWeight:'100'}}>
                         {applicationState.skills.map((skill, index) => (
                           <SkillTile
                             key={skill.id}
@@ -106,29 +116,45 @@ const Skills = () => {
                     {error && (
                       <FormHelperText>Please select at least one skill</FormHelperText>
                     )}
-                    <Link href="/hire/quiz/dev-resources" passHref>
-                      <IconButton aria-label="back">
-                        <ArrowBackIosIcon />
-                      </IconButton>
-                    </Link>
-                    <Button type="submit" variant="contained" color="primary">
-                      Next
-                    </Button>
+                    <div className="col-10 row pt-30">
+                      <div className="col-6">
+                        <Link href="/hire/quiz/dev-resources" passHref className="font-14" style={{float:'left'}}>
+                          <IconButton aria-label="back" style={{fontSize:'12px',marginTop:'-10px;'}}>
+                            <ArrowBackIosIcon />Back
+                          </IconButton>
+                        </Link>
+                      </div>
+                      <div className="col-6">
+                        <Button type="submit" variant="contained" color="primary" className="font-14" style={{width:'100px',float:'right'}}>
+                          Next
+                        </Button>
+                      </div>
+                    </div>
                   </FormControl>
                 </form>
               </div>
           </div>
 
-          <div className="row col-lg-4 col-md-12 pl-4 text-center" style={{background: 'linear-gradient(-1deg,#394458,#191e28 96%)', height:'637px' , minHeight: '100%', paddingTop: '100px', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '100px'}}>
+          <div className="row col-lg-4 col-md-12 pl-4 text-center" style={{background: 'linear-gradient(-1deg,#394458,#191e28 96%)', height:'1100px' , minHeight: '100%', paddingTop: '100px', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '100px'}}>
             <div className="col-12 h6">TRUSTED BY</div>
-            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>
+            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{maxHeight: '30px', minWidth: '100px'}}/></div>            
           </div>
         </div>
       </section>
