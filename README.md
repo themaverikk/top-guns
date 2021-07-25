@@ -16,4 +16,4 @@ top-guns is an open source project to for employers to find and hire top-guns (A
 - Open a new terminal and go to `src/server` directory by running `cd src/server`
 - Run `yarn install`
 - Run `yarn dev`
-- Navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the magic.
+- Navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the magic, and if you don't, just let us know :) 
