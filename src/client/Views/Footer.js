@@ -4,7 +4,7 @@ export function Footer() {
       <footer>
         <section id="footer-Content">
           <div className="container">
-            <div className="row">
+            <div className="row" style={{justifyContent:'space-around'}}>
               {/* <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <div className="footer-logo">
                   <img src="img/footer-logo.png" alt="" />
@@ -37,7 +37,7 @@ export function Footer() {
                       <a href="#"> Career</a>
                     </li>
                     <li>
-                      <a href="#"> Blog</a>
+                      <a href="#blog"> Blog</a>
                     </li>
                   </ul>
                 </div>
@@ -57,7 +57,7 @@ export function Footer() {
                       <a href="#"> Price</a>
                     </li>
                     <li>
-                      <a href="#"> Scurity</a>
+                      <a href="#"> Security</a>
                     </li>
                     <li>
                       <a href="#"> Why SLICK?</a>
@@ -66,7 +66,7 @@ export function Footer() {
                 </div>
               </div>
 
-              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              {/* <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <div className="widget">
                   <h3 className="block-title">Download App</h3>
                   <ul className="menu">
@@ -87,7 +87,7 @@ export function Footer() {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
 
               <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 {/* <div className="widget">
@@ -111,13 +111,13 @@ export function Footer() {
                   <h3 className="block-title">Contact Us</h3>
                   <ul className="menu">
                     <li>
-                      <a href="#">VPO Rajgarh,Julana, Jind (HR)</a>
+                      <a >VPO Rajgarh,Julana, Jind (HR)</a>
                     </li>
                     <li>
-                      <a href="#">8750000375</a>
+                      <a >8750000375</a>
                     </li>
                     <li>
-                      <a href="#">support@topguns.com</a>
+                      <a href="mailto:support@topguns.com">support@topguns.com</a>
                     </li>
                   </ul>
                 </div>

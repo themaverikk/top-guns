@@ -133,9 +133,19 @@ const CandidateApply = () => {
             </Head>
 
             <main>
-            <section id="business-plan" style={{padding: '0px',width:'100%'}}>
-                <div className="row">
-                    <div className="col-lg-8 col-md-12 pl-0 pt-70 pr-5">
+                <section id="business-plan" style={{ padding: '0px', width: '100%' }}>
+                    <div className="row">
+                        <div className="col-lg-8 col-md-12 pl-0 pr-5">
+                            <div className="col-lg-12 col-md-12 pt-70 pr-5 text-center">
+                                <img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} />
+                            </div>
+                            <div className="text-center" style={{ paddingTop: '30px' }}>
+                                <h5 className="text-center font-18">Thank you for your interest in Hire James Bond.</h5>
+                            </div>
+                            <h1 className="text-center" style={{fontFamily: 'Proxima Nova,Arial,"sans-serif"',paddingTop: '20px'}}>
+                            Apply to Join the World's Top Talent Network
+                            </h1>
+                            <h5 className="text-center font-18">Fill this form to join us</h5>
                         <div style={{
                             fontFamily: 'Maison-Bold',
                             display: 'flex',
@@ -145,47 +155,48 @@ const CandidateApply = () => {
                             <form id="candidateApplyForm" onSubmit={handleSubmit}>
                                 <FormControl component="fieldset" error={error.resume}>
                                     {Object.keys(applicationState.candidateDetails).map(field =>
-                                        <TextField key={field} variant="outlined" required={true} label={applicationState.candidateDetails[field].label} defaultValue={applicationState.candidateDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} style={{padding:'10px'}}/>
+                                        <TextField key={field} variant="outlined" required={true} label={applicationState.candidateDetails[field].label} defaultValue={applicationState.candidateDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} style={{ padding: '10px' }} />
                                     )}
-
-                                    <input type="file" hidden accept=".pdf,.doc,.docx,.txt" id="resume-upload" onChange={handleFileChange} />
+                                    <input type="file"  hidden accept=".pdf,.doc,.docx,.txt" id="resume-upload" onChange={handleFileChange} />
                                     <label htmlFor="resume-upload">
                                         <IconButton color="primary" className={classes.button} component="span">
-                                            <PublishIcon /><span className="font-14">(Only pdf, doc, docx, txt allowed)</span>
+                                            <PublishIcon /><span className="font-14">Upload your Resume/CV<br/>(Only pdf, doc, docx, txt allowed)</span>
                                         </IconButton>
+                                        {resume && <p style={{fontSize:'small',paddingLeft: '10px'}}>{resume.name}</p>}
                                     </label>
                                     <FormHelperText>{helperText.resume}</FormHelperText>
-                                    <div className="col-10 row pt-30" style={{width:'400px'}}>
-                                    <div className="col-6">
-                                        <Link href="/" passHref className="font-14" style={{float:'left'}}>
-                                            <IconButton aria-label="back" style={{fontSize:'12px',marginTop:'-10px;'}}>
-                                            <ArrowBackIosIcon />Back
-                                            </IconButton>
-                                        </Link>
+                                        <div style={{ width: '500px' ,borderTopStyle: 'solid', borderTopWidth: '1px', borderTopColor: '#d8d8d8'}}></div>
+                                        <div className="col-10 row pt-30" style={{ width: '400px' }}>
+                                        <div className="col-6">
+                                            <a href="/" passHref className="font-14" style={{ float: 'left' }}>
+                                                <IconButton aria-label="back" style={{ fontSize: '12px', marginTop: '-10px;' }}>
+                                                    <ArrowBackIosIcon />Back
+                                                </IconButton>
+                                            </a>
                                         </div>
                                         <div className="col-6">
-                                        <Button type="submit" variant="contained" color="primary" className="font-14" style={{width:'100px',float:'right'}}>
-                                            Submit
-                                        </Button>
+                                            <Button type="submit" variant="contained" color="primary" className="font-14" style={{ width: '100px', float: 'right' }}>
+                                                Submit
+                                            </Button>
                                         </div>
                                     </div>
                                 </FormControl>
                             </form>
                         </div>
                     </div>
-                    <div className="row col-lg-4 col-md-12 pl-4 text-center" style={{background: 'linear-gradient(-1deg,#394458,#191e28 96%)', height:'637px' , minHeight: '100%', paddingTop: '100px', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '100px'}}>
+                    <div className="row col-lg-4 col-md-12 pl-4 text-center" style={{ background: 'linear-gradient(-1deg,#394458,#191e28 96%)', minHeight: '100vh', paddingTop: '100px', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '100px' }}>
                         <div className="col-12 h6">TRUSTED BY</div>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
+                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
                     </div>
-                </div>
-            </section>
+                    </div>
+                </section>
             </main>
         </div>
     );

@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     gridList: {
         width: '80%',
         // height: 450,
-        paddingLeft:'50px',
-        fontSize:'14px',
+        paddingLeft: '50px',
+        fontSize: '14px',
     },
 
 }));
@@ -140,62 +140,65 @@ const Contact = () => {
                 <meta name="description" content="Hire Top Engineers Remotely" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-        <main>
-            <section id="business-plan" style={{padding: '0px',width:'100%'}}>
-               <div className="row">
-                <div className="col-lg-8 col-md-12">
-                    <div className="col-lg-12 col-md-12 pt-70 pr-5 text-center" style={{paddingLeft:'220px'}}>
-                        <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                    </div>
-                    <div className="col-lg-12 col-md-12 pl-0 pr-5 text-center" style={{paddingTop:'30px'}}>
-                        <h5 className="text-center font-18">Thank you for your interest in Hire James Bond.</h5>
-                        <h6 className="text-center font-16 pl-0 pt-30 pr-5">We do not yet offer top talent in India</h6>
-                    </div>
-                    <div style={{
-                        fontFamily: 'Maison-Bold',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        paddingTop:'40px'
-                    }}>
-                    <form id="hireContactForm" onSubmit={handleSubmit}>
-                        <FormControl component="fieldset">
-                            {Object.keys(applicationState.contactDetails).map(field =>
-                                <TextField key={field} variant="outlined" required={true} label={applicationState.contactDetails[field].label} defaultValue={applicationState.contactDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} style={{padding:'10px'}} />
-                            )}
-                        <div className="col-10 row pt-30" style={{width:'400px'}}>
-                            <div className="col-6">
-                                <Link href="/hire/quiz/skills" passHref className="font-14" style={{float:'left'}}>
-                                    <IconButton aria-label="back" style={{fontSize:'12px',marginTop:'-10px;'}}>
-                                        <ArrowBackIosIcon />Back
-                                    </IconButton>
-                                </Link>
+            <main>
+                <section id="business-plan" style={{ padding: '0px', width: '100%' }}>
+                    <div className="row">
+                        <div className="col-lg-8 col-md-12">
+                            <div className="col-lg-12 col-md-12 pt-70 pr-5 text-center" >
+                                <img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} />
                             </div>
-                            <div className="col-6">
-                                <Button type="submit" variant="contained" color="primary" className="font-14" style={{width:'100px',float:'right'}}>
-                                    Submit
-                                </Button>
+                            <div className="text-center" style={{ paddingTop: '30px' }}>
+                                <h5 className="text-center font-18">Thank you for your interest in Hire James Bond.</h5>
+                            </div>
+                            <div style={{
+                                fontFamily: 'Maison-Bold',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                paddingTop: '40px'
+                            }}>
+                                <div>
+                                    <h5 style={{ fontSize: 'large' }}><b> How do we reach you ?</b></h5>
+                                    <p style={{marginBottom: '5px'}}>Our talent experts will be in touch to help you find the best candidates for your job.</p>
+                                    <form id="hireContactForm" onSubmit={handleSubmit}>
+                                        <FormControl component="fieldset">
+                                            {Object.keys(applicationState.contactDetails).map(field =>
+                                                <TextField key={field} variant="outlined" required={true} label={applicationState.contactDetails[field].label} defaultValue={applicationState.contactDetails[field].value} error={error[field]} helperText={helperText[field]} onChange={handleChange(field)} style={{ padding: '10 10 10 10', width: '30vw', marginBottom: '15px' }} />
+                                            )}
+                                            <div className="col-10 row pt-30" style={{ width: '40vw', borderTopStyle: 'solid', borderTopWidth: '1px',borderTopColor: '#d8d8d8'}}>
+                                                <div className="col-6">
+                                                    <Link href="/hire/quiz/skills" passHref className="font-14" style={{ float: 'left' }}>
+                                                        <IconButton aria-label="back" style={{ fontSize: '12px', marginTop: '-10px;' }}>
+                                                            <ArrowBackIosIcon />Back
+                                                        </IconButton>
+                                                    </Link>
+                                                </div>
+                                                <div className="col-6">
+                                                    <Button type="submit" variant="contained" color="primary" className="font-14" style={{ width: '100px', float: 'right' }}>
+                                                        Submit
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        </FormControl>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                     </FormControl>
-                    </form>
-                    </div>
-                </div>
 
-                <div className="row col-lg-4 col-md-12 pl-4 text-center" style={{background: 'linear-gradient(-1deg,#394458,#191e28 96%)', height:'800px' , minHeight: '100%', paddingTop: '100px', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '100px'}}>
-                    <div className="col-12 h6">TRUSTED BY</div>
-                    <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                    <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                    <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                    <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                    <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                    <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                    <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                    <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{minHeight: '50px', minWidth: '100px'}}/></div>
-                </div>
-              </div>
-        </section>
-    </main>
+                        <div className="row col-lg-4 col-md-12 pl-4 text-center" style={{ background: 'linear-gradient(-1deg,#394458,#191e28 96%)', minHeight: '100vh', paddingTop: '100px', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '100px' }}>
+                            <div className="col-12 h6">TRUSTED BY</div>
+                            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                            <div className="col-6"><img src="../../img/download.svg" className="img-fluid" alt="" style={{ minHeight: '50px', minWidth: '100px' }} /></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
     );
 };

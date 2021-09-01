@@ -39,16 +39,6 @@ export function Hero() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link page-scroll" href="#showcase">
-                  Showcase
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link page-scroll" href="#team">
-                  Team
-                </a>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link page-scroll" href="#blog">
                   Blog
                 </a>
@@ -56,11 +46,6 @@ export function Hero() {
               <li className="nav-item">
                 <a className="nav-link page-scroll" href="#contact">
                   Contact
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="btn btn-singin" href="#">
-                  Download
                 </a>
               </li>
             </ul>

@@ -35,9 +35,9 @@ export default function Home() {
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <script type="text/javascript" src="../js/jquery-min.js" />
+        <script type="text/javascript" src="../js/jquery.magnific-popup.min.js" />
         <script type="text/javascript" src="../js/owl.carousel.min.js" />
         <script type="text/javascript" src="../js/bootstrap.min.js" />
-        <script type="text/javascript" src="../js/jquery.magnific-popup.min.js" />
         <script type="text/javascript" src="../js/nivo-lightbox.js" />
         <script type="text/javascript" src="../js/main.js" />
 
@@ -48,8 +48,8 @@ export default function Home() {
       {/* <Business /> */}
       <Features />
       <Showcase />
-      <Testimonials />
-      <Team />
+      {/* <Testimonials /> */}
+      {/* <Team /> */}
       <Blog />
       <Contact />
       <Footer />

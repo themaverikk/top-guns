@@ -9,10 +9,9 @@ export function Contact() {
                 <h2 className="section-title">Get In Touch</h2>
                 <div className="desc-text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do
+                    Our support Team is always there to help you
                   </p>
-                  <p>eiusmod tempor incididunt ut labore et dolore.</p>
+                  <p>Fell free to drop a message we will get back to you as soon as possible.</p>
                 </div>
               </div>
             </div>
